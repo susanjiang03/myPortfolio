@@ -1,0 +1,88 @@
+
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title> My Portfolio</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+     <script src="../javascripts/bootstrap.min.js"></script>
+     <link rel="stylesheet" href="../stylesheets/bootstrap.min.css">
+ <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+  
+</head>
+<style>
+
+.vcenter{
+ margin: auto;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.circle{
+  border-radius: 100%;
+}
+
+
+img{
+/*  max-width:100%;
+  max-height:100%;*/
+}
+</style>
+<script type="text/javascript">
+  
+$(document).ready(function(){
+
+$('.circle').height($('.circle').width());
+// alert("hello");
+
+});
+
+</script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Component',         'Percetage'],
+          ['Software Engineering',      32],
+          ['Data visualization',         8],
+          ['EdTech Innovation',         19],
+          ['Math Education',            11],
+          ['Social Change',             16],
+          ['Entrepreneurship',          14]
+
+
+        ]);
+
+        var options = {
+          // title: 'My Daily Activities',
+          pieHole: 0.5,
+          legend: 'right',
+          width: '100%',
+          chartArea:{
+              top:20,
+              left:256,
+               width: '80%',
+           }       
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+  </div>
+</nav>
+<div class="container vcenter" style="position: relative;">
+       <h1><a>Susan Lingshan Jiang</a></h1>
+      <div id="donutchart" class="circle" style="width:85%;margin:0 auto auto auto;z-index: 0" >
+      </div>
+       <img src="../images/jane.jpg" class="btn btn-default" style="width:220px;height:220px;border-radius: 100%;top:278px;
+       left:40%;z-index: 1;position: absolute;">
+</div>
+</body>
+</html>
