@@ -3,7 +3,7 @@
 <html lang="en">
    <head>
       <meta charset="utf-8">
-      <title> My Portfolio</title>
+      <title> About Me</title>
       <script src="../static/javascripts/jquery-1.12.4.min.js"></script>
       <script src="../static/javascripts/bootstrap.min.js"></script>
      <link rel="stylesheet" href="../static/stylesheets/bootstrap.min.css">
@@ -54,7 +54,8 @@ $('.circle').height($('.circle').width());
         ]);
 
         var options = {
-          // title: 'My Daily Activities',
+
+          // title: 'About Me',
           pieHole: 0.5,
           legend: 'right',
           width: '1000px',
@@ -72,13 +73,22 @@ $('.circle').height($('.circle').width());
 
 <body>
 <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-  <!-- <img class="pull-left btn" src="../images/mylogo.png" style="width:80px;height:75px;"> -->
-  </div>
+   <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html">About Me</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="myPortfolio.html">My Projects</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
 </nav>
 <div class="container vcenter">
       <div class="h1 affix" style="z-index: 1;position:fixed;left:400px;top:45px;width:500px;">
-          <a> 
+          <a href="myPortfolio.html"> 
             <!-- <img src="../images/mylogo.jpg" style="width:80px;height:75px;"> -->
              Susan Lingshan Jiang
           </a>
@@ -86,7 +96,10 @@ $('.circle').height($('.circle').width());
       <div id="donutchart" class="circle" style="position:fixed;left:400px;top:165px;
       width:900px;margin:0 auto auto auto;z-index: 0" >
       </div>
-       <img src="../images/me.jpg" class="btn btn-default" style="width:250px;height:250px;border-radius: 100%;top:333px;left:555px;z-index: 1;position:fixed;">
+       <a href="myPortfolio.html">
+        <img src="../images/me.jpg" class="btn btn-default" 
+        style="width:250px;height:250px;border-radius: 100%;top:333px;left:555px;z-index: 1;position:fixed;">
+       </a>
 </div>
 </body>
 </html>

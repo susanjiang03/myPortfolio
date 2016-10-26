@@ -1,0 +1,86 @@
+
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title> My Portfolio </title>
+      <script src="../static/javascripts/jquery-1.12.4.min.js"></script>
+      <script src="../static/javascripts/bootstrap.min.js"></script>
+     <link rel="stylesheet" href="../static/stylesheets/bootstrap.min.css">
+     <script type="text/javascript" src="../static/javascripts/loader.js"></script>
+</head>
+<style>
+
+.vcenter{
+  margin: auto;
+  text-align: center;
+ vertical-align: middle;
+}
+
+.circle{
+  border-radius: 100%;
+}
+
+.btnLink{
+  width:30%;
+  white-space: normal;
+  margin:1%;
+  vertical-align: middle;
+  font-size: 2.8vw;
+  color:white;
+}
+
+.btnLink:hover { 
+    color:black;
+}
+
+img{
+  width:100%;
+  height:50%;
+}
+</style>
+<script type="text/javascript">
+  
+$(document).ready(function(){
+$('.circle').height($('.circle').width());
+$('.btnLink').height($('a.btn').width());
+});
+
+</script>
+
+<body>
+<nav class="navbar navbar-inverse">
+   <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html">About Me</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="myPortfolio.html">My Projects</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>
+<div class="container vcenter">
+    <a href='https://terrestrial-hydrology-viz.herokuapp.com'
+      class="btn btn-success btnLink">
+      <img src="./images/terrestrial-hydrology-viz.png">
+       Terrestrial Hydrology Visualization
+    </a>
+
+    <a href="questions.html" class="btn vcenter btnLink" style="background: #1E88E5;">
+      <img src="./images/questions.png">
+    
+       Programming Questions Code and Demo
+    </a>
+
+    <a class="btn btnLink" style="background-color: #673ab7;"> Build Me</a>
+     <a class="btn btnLink btn-danger disabled"> eOrganizer</a>
+     <a class="btn btnLink btn-warning disabled"> Pipleline Monitor</a>
+     <a class="btn btnLink btn-primary disabled"> eBook Sharing System</a>
+       
+</div>
+</body>
+</html>
