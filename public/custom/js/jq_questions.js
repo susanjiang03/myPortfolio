@@ -110,7 +110,7 @@ function IsPalindrome(str){
 
 
    	  $("#processQuestion2").append(
-   	  	'<p class="col-lg-12 bg-primary" style="font-size:1.5vw;margin-top:2%">left < right  </p>' +
+   	  	'<p class="col-lg-12 bg-primary" style="font-size:1.5vw;margin-top:2%">left : '+ left +'  <   right : '+ right+' </p>' +
         '<div class="col-lg-12" >' + 
              CreateDivs(str, left, right) + 
          '</div>'
@@ -177,7 +177,7 @@ function IsPalindrome(str){
    //if left >= right
 
       	  $("#processQuestion2").append(
-   	  	'<p class="col-lg-12 bg-primary" style="font-size:1.5vw;margin-top:2%">left >= right  </p>' +
+   	  	'<p class="col-lg-12 bg-primary" style="font-size:1.5vw;margin-top:2%">left : '+ left +' >=  right : '+ right+' </p>' +
         '<div class="col-lg-12" >' + 
              CreateDivs(str, left, right) + 
          '</div>' +
