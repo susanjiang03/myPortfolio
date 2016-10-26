@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Questions</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="../static/javascripts/jquery-1.12.4.min.js"></script>
+      <script src="../static/javascripts/bootstrap.min.js"></script>
+     <link rel="stylesheet" href="../static/stylesheets/bootstrap.min.css">
+     <script src="../custom/js/jq_questions.js"></script>
+  <style>
+  body {
+      position: relative;
+  }
+  #question1 {padding-top:50px;height:100vh;color: #fff; background-color: #1E88E5;}
+  #question2 {padding-top:50px;height:100vh;color: #fff; background-color: #673ab7;}
+  </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Progamming</a>
+    </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="#question1">Question 1</a></li>
+          <li><a href="#question2">Questionc 2</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div id="question1" class="container-fluid">
+      <div class="col-lg-12 h3"> Question 1:<br>
+           Given a non-negative integer num, repeatedly add all its digits until the result has only one digit.
+          <br>
+          For example:
+          Given num = 38, the process is like: 3 + 8 = 11, 1 + 1 = 2. Since 2 has only one digit, return it.
+      </div>
+      <div class="col-lg-5" style="height:80%;background-color: black;">
+          <h2 class="text-center">My Code (javascript)</h2>
+           <pre style="height:85%;overflow: auto;background-color: black;color:white">
+            <img src="../images/question1.png">
+
+/*num is a non-negative integer,
+add the digits until get a single digit 
+return rs*/
+
+function SumTillSingleDigit(num){
+   
+  //while not getting a single digit, keep adding all digits of the num;
+   while(num > 10){
+       num = AddAllDigits(num);
+   }
+   return num;
+};
+
+/*helper function num is a non-negative integer, 
+add all digits of num, from last digit to first
+return sum*/
+function AddAllDigits(num){
+
+    var sum = 0;
+    //while not getting first digit
+    while(num > 0){
+        //get last digit add to sum
+        var lastDigit = num % 10;
+        sum += lastDigit;
+        //get the rest num except last digit
+        num = Math.floor(num/10);
+   }
+   return sum;
+};
+
+console.log(SumTillSingleDigit(num));
+          </pre>
+       </div>
+       <div class="col-lg-7" style="height:80%;background-color: white;color:black">
+             <h2 class="text-center">Demo</h2>
+              <div class="row">
+                  <label class="col-lg-1 label-lg">Input</label>
+                  <span class="col-lg-4">
+                     <input id="inputQuestion1" type="text" class="form-control col-lg-3" placeholder="Non-negative integer num" aria-describedby="basic-addon1" value="38">
+                  </span>
+                  <button id="btnRunQuestion1" class="btn btn-primary col-lg-2"> Run </button>
+                  <label class="col-lg-1 label-lg">Result</label>
+                  <span id="txtResultQuestion1" class="bg-success col-lg-4 btn">&nbsp;</span>
+              </div>
+              <ul id="processQuestion1" class="row list-group" style="height:80%;overflow: auto;margin-top:1%">
+                       <h1 class="text-center">Steps ...</h1>
+              </ul>
+      </div>
+  </div>
+
+<div id="question2" class="container-fluid">
+    <div class="col-lg-12 h3">
+           Question 2:<br>
+           Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
+           <br>
+          For example,
+          "A man, a plan, a canal: Panama" is a palindrome.
+          "race a car" is not a palindrome.
+    </div>
+           <div class="col-lg-5" style="height:80%;background-color: black;">
+          <h2 class="text-center">My Code (javascript)</h2>
+           <pre style="height:85%;overflow: auto;background-color: black;color:white">
+            <img src="../images/question2.png">
+function IsPalindrome(str){
+    
+   var left = 0;
+   var right = str.length - 1;
+   var result = true;
+   while(left < right){
+
+      //if both str[left] and str[right] are alphanumeric
+      if(IsAlphanumeric(str[left]) && IsAlphanumeric(str[right])){
+            //compare, if their lowercase are equal ,
+            //move to next position, else return false
+            if(str[left].toLowerCase() == str[right].toLowerCase()){
+              left ++;
+              right --;
+            }
+            else
+              return false;
+      }
+      //not both are alphanumeric, move to next position, 
+      else{
+
+        if(!IsAlphanumeric(str[left])){
+          left ++;
+        }
+
+        if(!IsAlphanumeric(str[right])){
+          right --;
+        }
+
+    }
+   }
+   //if left >= right
+   return result;
+
+};
+
+//check if character c is alphanumeric
+function IsAlphanumeric(c){
+
+    if(c.match(/[a-zA-Z]/) || c.match(/[0-9]/))
+       return true;
+    else 
+       return false;
+};
+          </pre>
+       </div>
+       <div class="col-lg-7" style="height:80%;background-color: white;color:black">
+             <h2 class="text-center">Demo</h2>
+              <div class="row">
+                  <label class="col-lg-1 label-lg">Input</label>
+                  <span class="col-lg-11">
+                     <input id="inputQuestion2" type="text" class="form-control row" placeholder="String" aria-describedby="basic-addon1" value="A man, a plan, a canal: Panama">
+                  </span>
+              </div>
+              <div class="row" style="margin-top:1%">
+                  <label class="col-lg-1 label-lg">Result</label>
+                  <span id="txtResultQuestion2" class="bg-success col-lg-6 btn">&nbsp;</span>
+                  <button id="btnRunQuestion2" class="btn btn-primary col-lg-5">Run</button>
+              </div>
+              <ul id="processQuestion2" class="row list-group" style="height:70%;overflow: auto;margin-top:1%">
+                       <h1 class="text-center">Steps ...</h1>
+              </ul>
+      </div>
+  </div>
+
+</div>
+
+</body>
+</html>
+
