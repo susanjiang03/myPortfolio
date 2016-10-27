@@ -29,11 +29,13 @@ img{
 .section{
 
   padding-top:50px;
-  height:100vh;
+  min-height:100vh;
+  overflow: auto
 }
 
 .btnLink{
-  width:29%;
+  height:42vh;
+  width:30%;
   white-space: normal;
   margin:1%;
   vertical-align: middle;

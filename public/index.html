@@ -15,7 +15,7 @@
   
 $(document).ready(function(){
 
-$('.btnLink ').height($('.btnLink').width());
+// $('.btnLink ').width($('.btnLink').height());
  $('[data-toggle="tooltip"]').tooltip();
 // alert("hello");
 
@@ -27,12 +27,12 @@ $('.btnLink ').height($('.btnLink').width());
 <nav class="navbar navbar-inverse navbar-fixed-top">
    <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="">About Me</a>
+      <!-- <a class="navbar-brand" href="#section0">About Me</a> -->
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-          <!-- <li><a href="myPortfolio.html">My Projects</a></li> -->
-          <li class="active"><a href="#section1">My Interests</a></li>
+          <li class="active"><a class="navbar-brand" href="#section0">About Me</a></li>
+          <li><a href="#section1">My Interests</a></li>
           <li><a href="#section2">My Skills</a></li>
           <li><a href="#section3">My Projects</a></li>
           <li><a href="#section4">My Idols</a></li>
@@ -49,6 +49,14 @@ $('.btnLink ').height($('.btnLink').width());
           </a>
       </div> -->
     <div class="row">
+
+      <div id="section0" class="col-lg-12 vcenter section" style="background-color: lime">
+         <h1><strong> <i> Summary </i></strong></h1>
+               <!-- <a> -->
+        <img src="../images/me.jpg" class="" 
+        style="width:300px;height:300px;border-radius: 100%;">
+       <!-- </a> -->
+      </div>
       <div id="section1" class="col-lg-12 vcenter section" style="background-color: #99ffff">
          <h1><strong> <i>My Interests </i></strong></h1>
         <div id="donutchart" class="" style="width:70%;margin:auto;">
@@ -56,11 +64,6 @@ $('.btnLink ').height($('.btnLink').width());
         width:900px;margin:0 auto auto auto;z-index: 0" > -->
         </div>
       </div>
-   <!--     <a href="myPortfolio.html">
-        <img src="../images/me.jpg" class="btn btn-default" 
-        style="width:250px;height:250px;border-radius: 100%;top:333px;left:555px;z-index: 1;position:fixed;">
-       </a> -->
-
        <div id="section2" class="col-lg-12 vcenter section" style="background-color: yellow">
           <h1><strong> <i>My Skills</i></strong></h1>
           <p class="row">&nbsp;</p>
@@ -91,11 +94,12 @@ $('.btnLink ').height($('.btnLink').width());
            </div>
     </div>
      <div id="section3" class="col-lg-12 vcenter section" style="height: auto">
-          <h1>
-            <strong> <i><u>
-              <a href="https://github.com/susanjiang03" data-toggle="tooltip" title="Link to My Github"> My Projects</a>
-             </u></i></strong>
-          </h1>
+          <h1><strong> <i><u>
+              <a href="https://github.com/susanjiang03">
+              <img src="./images/GitHub-Mark-120px-plus.png" style="height:40px;width:40px">
+               My Projects
+              </a>
+          </u></i></strong></h1>
           <a href="questions.html" class="btn vcenter btnLink" style="background: #1E88E5;">
             <img src="./images/questions.png">
             Programming Questions Code and Demo
