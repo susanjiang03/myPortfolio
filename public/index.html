@@ -16,6 +16,7 @@
 $(document).ready(function(){
 
 $('.btnLink ').height($('.btnLink').width());
+ $('[data-toggle="tooltip"]').tooltip();
 // alert("hello");
 
 });
@@ -26,14 +27,14 @@ $('.btnLink ').height($('.btnLink').width());
 <nav class="navbar navbar-inverse navbar-fixed-top">
    <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="index.html">About Me</a>
+      <a class="navbar-brand" href="">About Me</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
           <!-- <li><a href="myPortfolio.html">My Projects</a></li> -->
           <li class="active"><a href="#section1">My Interests</a></li>
           <li><a href="#section2">My Skills</a></li>
-          <li><a href="#section3"> My Projects</a></li>
+          <li><a href="#section3">My Projects</a></li>
           <li><a href="#section4">My Idols</a></li>
           <li><a href="#section5">My Goal</a></li>
         </ul>
@@ -90,7 +91,11 @@ $('.btnLink ').height($('.btnLink').width());
            </div>
     </div>
      <div id="section3" class="col-lg-12 vcenter section" style="height: auto">
-          <h1><strong> <i> My Projects</i></strong></h1>
+          <h1>
+            <strong> <i><u>
+              <a href="https://github.com/susanjiang03" data-toggle="tooltip" title="Link to My Github"> My Projects</a>
+             </u></i></strong>
+          </h1>
           <a href="questions.html" class="btn vcenter btnLink" style="background: #1E88E5;">
             <img src="./images/questions.png">
             Programming Questions Code and Demo
