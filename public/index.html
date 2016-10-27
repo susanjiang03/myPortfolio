@@ -8,98 +8,115 @@
       <script src="../static/javascripts/bootstrap.min.js"></script>
      <link rel="stylesheet" href="../static/stylesheets/bootstrap.min.css">
      <script type="text/javascript" src="../static/javascripts/loader.js"></script>
+     <script type="text/javascript" src="../custom/js/js_drawCharts.js"></script>
+     <link rel="stylesheet" href="../custom/style/css_index.css">
 </head>
-<style>
-
-.vcenter{
- margin: auto;
-  text-align: center;
-  vertical-align: middle;
-}
-
-.circle{
-  border-radius: 100%;
-}
-
-
-img{
-/*  max-width:100%;
-  max-height:100%;*/
-}
-</style>
 <script type="text/javascript">
   
 $(document).ready(function(){
 
-$('.circle').height($('.circle').width());
+$('.btnLink ').height($('.btnLink').width());
 // alert("hello");
 
 });
 
 </script>
-    <script type="text/javascript">
-      google.charts.load("current", {packages:["corechart"]});
-      google.charts.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Component',         'Percetage'],
-          ['Software Engineering',      32],
-          ['Data visualization',         8],
-          ['EdTech Innovation',         19],
-          ['Math Education',            11],
-          ['Social Change',             16],
-          ['Entrepreneurship',          14]
 
-
-        ]);
-
-        var options = {
-
-          // title: 'About Me',
-          pieHole: 0.5,
-          legend: 'right',
-          width: '1000px',
-          chartArea:{
-              top:10,
-              // left:256,
-               width: '100%',
-           }       
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
-        chart.draw(data, options);
-      }
-    </script>
-
-<body>
-<nav class="navbar navbar-inverse">
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<nav class="navbar navbar-inverse navbar-fixed-top">
    <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="index.html">About Me</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-          <li><a href="myPortfolio.html">My Projects</a></li>
-            </ul>
-          </li>
+          <!-- <li><a href="myPortfolio.html">My Projects</a></li> -->
+          <li class="active"><a href="#section1">My Interests</a></li>
+          <li><a href="#section2">My Skills</a></li>
+          <li><a href="#section3"> My Projects</a></li>
+          <li><a href="#section4">My Idols</a></li>
+          <li><a href="#section5">My Goal</a></li>
         </ul>
       </div>
     </div>
 </nav>
-<div class="container vcenter">
-      <div class="h1 affix" style="z-index: 1;position:fixed;left:400px;top:45px;width:500px;">
-          <a href="myPortfolio.html"> 
-            <!-- <img src="../images/mylogo.jpg" style="width:80px;height:75px;"> -->
+<div class="container-fluid">
+  <!--     <div class="h1 affix" style="z-index: 1;position:fixed;left:400px;top:45px;width:500px;">
+          <a href="myPortfolio.html">  -->
+            <!-- <img src="../images/mylogo.jpg" style="width:80px;height:75px;">
              Susan Lingshan Jiang
           </a>
+      </div> -->
+    <div class="row">
+      <div id="section1" class="col-lg-12 vcenter section" style="background-color: #99ffff">
+         <h1><strong> <i>My Interests </i></strong></h1>
+        <div id="donutchart" class="" style="width:70%;margin:auto;">
+        <!-- style="position:fixed;left:400px;top:165px;
+        width:900px;margin:0 auto auto auto;z-index: 0" > -->
+        </div>
       </div>
-      <div id="donutchart" class="circle" style="position:fixed;left:400px;top:165px;
-      width:900px;margin:0 auto auto auto;z-index: 0" >
-      </div>
-       <a href="myPortfolio.html">
+   <!--     <a href="myPortfolio.html">
         <img src="../images/me.jpg" class="btn btn-default" 
         style="width:250px;height:250px;border-radius: 100%;top:333px;left:555px;z-index: 1;position:fixed;">
-       </a>
+       </a> -->
+
+       <div id="section2" class="col-lg-12 vcenter section" style="background-color: yellow">
+          <h1><strong> <i>My Skills</i></strong></h1>
+          <p class="row">&nbsp;</p>
+           <div class="barChart">
+             Programming
+             <div id="barchartProgramming"></div>
+           </div>
+           <div  class="barChart">
+             Library
+              <div id="barchartLibrary"></div> 
+           </div>
+             <div class="barChart">
+               Framework
+               <div id="barchartFramework"></div>
+            </div>
+
+            <div  class="barChart">
+              Application
+              <div id="barchartApplication"></div>
+           </div>
+           <div  class="barChart">
+               Soft Skills
+              <div id="barchartSoftSkills"></div>
+           </div>
+           <div  class="barChart">
+               Language
+              <div id="barchartLanguage"></div>
+           </div>
+    </div>
+     <div id="section3" class="col-lg-12 vcenter section" style="height: auto">
+          <h1><strong> <i> My Projects</i></strong></h1>
+          <a href="questions.html" class="btn vcenter btnLink" style="background: #1E88E5;">
+            <img src="./images/questions.png">
+            Programming Questions Code and Demo
+          </a>
+
+          <a href='https://terrestrial-hydrology-viz.herokuapp.com' class="btn btn-success btnLink">
+            <img src="./images/terrestrial-hydrology-viz.png">
+            Terrestrial Hydrology Visualization
+          </a>
+          <a class="btn btnLink disabled" style="background-color: #673ab7;"> Build Me</a>
+          <a class="btn btnLink btn-danger disabled"> eOrganizer</a>
+          <a class="btn btnLink btn-warning disabled"> Pipleline Monitor</a>
+          <a class="btn btnLink btn-primary disabled"> eBook Sharing System</a>
+
+    </div>
+    <div id="section4" class="col-lg-12 vcenter section" style="background: #1E88E5;">
+          <h1><strong> <i> My Idols</i></strong></h1>
+          .......
+
+    </div>
+    <div id="section5" class="col-lg-12 vcenter section" style="background-color: #673ab7;">
+          <h1><strong> <i> My Goals</i></strong></h1>
+          ......
+
+    </div>
+  </div>
 </div>
 </body>
 </html>
