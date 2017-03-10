@@ -1,131 +1,234 @@
-
-<!doctype html>
 <html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <title> Susan Jiang</title>
-      <script src="../static/javascripts/jquery-1.12.4.min.js"></script>
-      <script src="../static/javascripts/bootstrap.min.js"></script>
-     <link rel="stylesheet" href="../static/stylesheets/bootstrap.min.css">
-     <script type="text/javascript" src="../static/javascripts/loader.js"></script>
-     <script type="text/javascript" src="../custom/js/js_drawCharts.js"></script>
-     <link rel="stylesheet" href="../custom/style/css_index.css">
-</head>
-<script type="text/javascript">
-  
-$(document).ready(function(){
+    <head>
 
-// $('.btnLink ').width($('.btnLink').height());
- $('[data-toggle="tooltip"]').tooltip();
-// alert("hello");
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Susan Lingshan Jiang </title>
+        <script src="../static/javascripts/jquery-1.12.4.min.js"></script>
+        <script src="../static/javascripts/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="../static/stylesheets/bootstrap.min.css">
 
-});
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!-- [if lt IE 9]> -->
+           <!--  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> -->
+        <!-- <![endif] -->
+    </head>
 
-</script>
+    <body>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
-<nav class="navbar navbar-inverse navbar-fixed-top">
-   <div class="container-fluid">
-    <div class="navbar-header">
-      <!-- <a class="navbar-brand" href="#section0">About Me</a> -->
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav">
-          <li class="active"><a class="navbar-brand" href="#section0">About Me</a></li>
-          <li><a href="#section1">My Interests</a></li>
-          <li><a href="#section2">My Skills</a></li>
-          <li><a href="#section3">My Projects</a></li>
-          <li><a href="#section4">My Idols</a></li>
-          <li><a href="#section5">My Goal</a></li>
-        </ul>
-      </div>
-    </div>
-</nav>
-<div class="container-fluid">
-  <!--     <div class="h1 affix" style="z-index: 1;position:fixed;left:400px;top:45px;width:500px;">
-          <a href="myPortfolio.html">  -->
-            <!-- <img src="../images/mylogo.jpg" style="width:80px;height:75px;">
-             Susan Lingshan Jiang
-          </a>
-      </div> -->
-    <div class="row">
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand">About Me &nbsp;&nbsp;</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a class="navbar-brand" href="#section0">SUMMARY</a></li>
+                    <li><a href="#section1">EDUCTION</a></li>
+                    <li><a href="#section2">EXPERIENCE</a></li>
+                    <li><a href="#section3">PROJECTS</a></li>
+                    <li><a href="#section4">AFFILIATIONS</a></li>
+                    <li><a href="#section5">INTEREST</a></li>
+                  </ul>
+                </div>
+          </div>
+        </nav>
+            <!-- /.container -->
+        <!-- Page Content -->
+        <div class="container" style="margin-top:2vw;width:90%;">
 
-      <div id="section0" class="col-lg-12 vcenter section" style="background-color: lime">
-         <h1><strong> <i> Summary </i></strong></h1>
-               <!-- <a> -->
-        <img src="../images/me.jpg" class="" 
-        style="width:300px;height:300px;border-radius: 100%;">
-       <!-- </a> -->
-      </div>
-      <div id="section1" class="col-lg-12 vcenter section" style="background-color: #99ffff">
-         <h1><strong> <i>My Interests </i></strong></h1>
-        <div id="donutchart" class="" style="width:70%;margin:auto;">
-        style="position:fixed;left:400px;top:165px;
-        width:900px;margin:0 auto auto auto;z-index: 0" >
-        </div>
-      </div>
-       <div id="section2" class="col-lg-12 vcenter section" style="background-color: yellow">
-          <h1><strong> <i>My Skills</i></strong></h1>
-          <p class="row">&nbsp;</p>
-           <div class="barChart">
-             Programming
-             <div id="barchartProgramming"></div>
-           </div>
-           <div  class="barChart">
-             Library
-              <div id="barchartLibrary"></div> 
-           </div>
-             <div class="barChart">
-               Framework
-               <div id="barchartFramework"></div>
+            <!-- Page Heading -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header text-center">
+                      <i>Hello, World !</i>
+                        <!-- <small>Susan</small> -->
+                        <span>
+                        你<small>/nǐ/</small>好<small>/hǎo/</small>，
+                        世<small>/shì/</small>界<small>/jiè/</small> ！
+                        </span>
+                    </h1>
+                </div>
             </div>
+            <!-- /.row -->
+            <div class="col-lg-3" style="">
+              <div class="col-lg-12">
+               <img src="../images/me.jpg" class="" style="width:200px;height:200px;border-radius: 100%;">
+              </div>
 
-            <div  class="barChart">
-              Application
-              <div id="barchartApplication"></div>
-           </div>
-           <div  class="barChart">
-               Soft Skills
-              <div id="barchartSoftSkills"></div>
-           </div>
-           <div  class="barChart">
-               Language
-              <div id="barchartLanguage"></div>
-           </div>
-    </div>
-     <div id="section3" class="col-lg-12 vcenter section" style="height: auto">
-          <h1><strong> <i><u>
-              <a href="https://github.com/susanjiang03">
-              <img src="./images/GitHub-Mark-120px-plus.png" style="height:40px;width:40px">
-               My Projects
-              </a>
-          </u></i></strong></h1>
-          <a href="questions.html" class="btn vcenter btnLink" style="background: #1E88E5;">
-            <img src="./images/questions.png">
-            Programming Questions Code and Demo
-          </a>
+              <div class="panel row">
+                <div class="row">
+                  <a href="https://www.cuny.edu" class="col-lg-4 btn btn-default"><img src="../images/cuny.jpg" style="width:90px;height:45px"></a>
+                   
+                  <a href="https://cunytechprep.nyc" class="col-lg-4 btn btn-default"><img src="../images/ctp.jpg" style="width:90px;height:45px"></a>
 
-          <a href='https://terrestrial-hydrology-viz.herokuapp.com' class="btn btn-success btnLink">
-            <img src="./images/terrestrial-hydrology-viz.png">
-            Terrestrial Hydrology Visualization
-          </a>
-          <a class="btn btnLink disabled" style="background-color: #673ab7;"> Build Me</a>
-          <a class="btn btnLink btn-danger disabled"> eOrganizer</a>
-          <a class="btn btnLink btn-warning disabled"> Pipleline Monitor</a>
-          <a class="btn btnLink btn-primary disabled"> eBook Sharing System</a>
+                  <a href="http://www.techtalentpipeline.nyc/" class="col-lg-4 btn btn-default"><img src="../images/nycttp.jpg" style="width:90px;height:45px"></a>
 
-    </div>
-    <div id="section4" class="col-lg-12 vcenter section" style="background: #1E88E5;">
-          <h1><strong> <i> My Idols</i></strong></h1>
-          .......
+                </div>
+                <div class="row">
+                </div>
+                <div class="row">
+                </div>
+              </div>
 
-    </div>
-    <div id="section5" class="col-lg-12 vcenter section" style="background-color: #673ab7;">
-          <h1><strong> <i> My Goals</i></strong></h1>
-          ......
+            </div>
+            <!-- Project One -->
+            <div class="col-lg-9 col-lg-offset-3">
+            <div class="row">
+                <div class="col-md-7">
+                    <a href="#">
+                        <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                    </a>
+                </div>
+                <div class="col-md-5">
+                    <h3>Project One</h3>
+                    <h4>Subheading</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
+                    <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
+            </div>
+            <!-- /.row -->
 
-    </div>
-  </div>
+            <hr>
+
+            <!-- Project Two -->
+            <div class="row">
+                <div class="col-md-7">
+                    <a href="#">
+                        <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                    </a>
+                </div>
+                <div class="col-md-5">
+                    <h3>Project Two</h3>
+                    <h4>Subheading</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, odit velit cumque vero doloremque repellendus distinctio maiores rem expedita a nam vitae modi quidem similique ducimus! Velit, esse totam tempore.</p>
+                    <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
+            </div>
+            <!-- /.row -->
+
+            <hr>
+
+            <!-- Project Three -->
+            <div class="row">
+                <div class="col-md-7">
+                    <a href="#">
+                        <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                    </a>
+                </div>
+                <div class="col-md-5">
+                    <h3>Project Three</h3>
+                    <h4>Subheading</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, temporibus, dolores, at, praesentium ut unde repudiandae voluptatum sit ab debitis suscipit fugiat natus velit excepturi amet commodi deleniti alias possimus!</p>
+                    <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
+            </div>
+            <!-- /.row -->
+
+            <hr>
+
+            <!-- Project Four -->
+            <div class="row">
+
+                <div class="col-md-7">
+                    <a href="#">
+                        <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                    </a>
+                </div>
+                <div class="col-md-5">
+                    <h3>Project Four</h3>
+                    <h4>Subheading</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, quidem, consectetur, officia rem officiis illum aliquam perspiciatis aspernatur quod modi hic nemo qui soluta aut eius fugit quam in suscipit?</p>
+                    <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
+            </div>
+            <!-- /.row -->
+
+            <hr>
+
+            <!-- Project Five -->
+            <div class="row">
+                <div class="col-md-7">
+                    <a href="#">
+                        <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                    </a>
+                </div>
+                <div class="col-md-5">
+                    <h3>Project Five</h3>
+                    <h4>Subheading</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, quo, minima, inventore voluptatum saepe quos nostrum provident ex quisquam hic odio repellendus atque porro distinctio quae id laboriosam facilis dolorum.</p>
+                    <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
+            </div>
+            <!-- /.row -->
+
+            <hr>
+
+            <!-- Pagination -->
+    <!--         <div class="row text-center">
+                <div class="col-lg-12">
+                    <ul class="pagination">
+                        <li>
+                            <a href="#">«</a>
+                        </li>
+                        <li class="active">
+                            <a href="#">1</a>
+                        </li>
+                        <li>
+                            <a href="#">2</a>
+                        </li>
+                        <li>
+                            <a href="#">3</a>
+                        </li>
+                        <li>
+                            <a href="#">4</a>
+                        </li>
+                        <li>
+                            <a href="#">5</a>
+                        </li>
+                        <li>
+                            <a href="#">»</a>
+                        </li>
+                    </ul>
+                </div>
+            </div> -->
+            <!-- /.row -->
 </div>
-</body>
+            <hr>
+
+            <!-- Footer -->
+            <footer>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p>Copyright © Susan Jiang 2017</p>
+                    </div>
+                </div>
+                <!-- /.row -->
+            </footer>
+
+        </div>
+        <!-- /.container -->
+
+        <!-- jQuery -->
+        <script src="js/jquery.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+
+
+
+    </body>
 </html>
