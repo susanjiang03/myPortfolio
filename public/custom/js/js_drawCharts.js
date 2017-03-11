@@ -21,15 +21,14 @@ function DrawPieChart(){
         legend: 'bottom',
           pieSliceText: 'label',
         pieHole: 0.0,
-        height:600,
+        height:300,
         chartArea:{
              top:5,
              bottom:5,
              width: '100%',
-
          },
-         fontSize: 18, 
-         backgroundColor: '#99ffff',
+         fontSize: 9, 
+         // backgroundColor: '#99ffff',
         is3D: true   
   };
 
