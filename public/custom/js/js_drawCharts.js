@@ -20,16 +20,17 @@ function DrawPieChart(){
         
         legend: 'bottom',
           pieSliceText: 'label',
-        pieHole: 0.0,
-        height:300,
+        // pieHole: 0.2,
+        height:400,
         chartArea:{
              top:5,
              bottom:5,
              width: '100%',
          },
-         fontSize: 9, 
+         fontSize: 10, 
          // backgroundColor: '#99ffff',
-        is3D: true   
+        is3D: true ,
+        tooltip:{textStyle:{fontSize:'18'}},  
   };
 
   var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
@@ -55,6 +56,7 @@ var dataLibrary = [
         ["Boostrap", 90, "color:#990099;fill-opacity: 0.9", 'Boostrap (Proficient)'],
         ["Google Charts ", 70,  "color:#990099;fill-opacity: 0.7", 'Google Charts (Intermediate)'],
         ["D3",  60,  "color:#990099;fill-opacity: 0.6", 'D3 (Intermediate)'],
+        ["ReatJS",  50,  "color:#990099;fill-opacity: 0.5", 'ReatJS(Beginner)'],
       ];
 
 var dataFramework = [
@@ -103,7 +105,7 @@ function DrawBarChart(dataArray,containerID){
       var data = google.visualization.arrayToDataTable(dataArray);
       var view = new google.visualization.DataView(data);
 
-      var height = dataArray.length * 35;
+      var height = dataArray.length * 25;
       var options = {
         // title: "Programming Language",
         height: height,
@@ -118,9 +120,9 @@ function DrawBarChart(dataArray,containerID){
              top:0,
              left:5,
              bottom:5,
-             width:'100%',
+             width:'95%',
          },
-         backgroundColor: 'yellow',
+         // backgroundColor: 'yellow',
           vAxis: { textPosition : 'none'},
           annotations: {
              textStyle: {

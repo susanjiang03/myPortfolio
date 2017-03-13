@@ -39,17 +39,17 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand">About Me &nbsp;&nbsp;</a>
+            <a href="#aboutme" class="navbar-brand">About Me &nbsp;&nbsp;</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
             <li class="active"><a class="navbar-brand" href="#section0">SUMMARY</a></li>
-            <li><a href="#section1">RESUME</a></li>
-            <li><a href="#section2">EXPERIENCE</a></li>
-            <li><a href="#section3">PROJECTS</a></li>
-            <li><a href="#section4">AFFILIATIONS</a></li>
-            <li><a href="#section5">EDUCTION</a></li>
-            <li><a href="#section6">INTEREST</a></li>
+            <li><a href="#experience">EXPERIENCE</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#section3">AFFILIATIONS</a></li>
+            <li><a href="#section4">EDUCTION</a></li>
+            <li><a href="#section5">INTEREST</a></li>
+            <li><a href="#section6">RESUME</a></li>
           </ul>
         </div>
       </div>
@@ -74,7 +74,7 @@
 
       <div class="row">
         <!-- /.row -->
-        <div class="col-lg-3" style="padding:0">
+        <div id="aboutme" class="col-lg-3" style="padding:0">
           <div class="panel col-lg-12" style="padding:0;"">
             <div class="row btn-group">
               <a href="https://www.cuny.edu" class="btn btn-default">
@@ -93,10 +93,10 @@
               <img src="../images/me.jpg" class="" style="width:200px;height:200px;border-radius: 100%;">
             </div>
             <div class="text-center" >
-              <h3 ><b>Susan Lingshan Jiang</b></h3>
+              <h3><b>Susan Lingshan Jiang</b></h3>
               <h4><a><i class="fa fa-envelope"></i>&nbsp;susanjiang03@gmail.com</a></h4>
               <h4><i class="fa fa-phone"></i>&nbsp;+1 (646) 247-0567</h4>
-              <div>
+              <div class="row btn-group">
                 <a class="btn" href="https://github.com/susanjiang03" style="font-size:2.5vw">
                   <i class="fa fa-github" aria-hidden="true"></i>
                 </a>
@@ -110,38 +110,66 @@
                   <i class="fa fa-facebook" aria-hidden="true"></i>
                 </a>
               </div>
-              <!-- <h4>
-                <i class="fa fa-linkedin-square" aria-hidden="true"></i>&nbsp;
-                <a href="https://www.linkedin.com/in/susanjiang03/">linkedin.com/in/susanjiang03</a>
-              </h4>
-              <h4>
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-              </h4> -->
-            </div>
-            <div id="donutchart" class="">
-            </div>
+              <hr>
+              <h3>About Me</h3>
+              <div id="donutchart" class="">
+              </div>
+              <hr>
+             <!-- <div class="barChart"> -->
+              <h3>SKILLS</h3>
+              <h4>Programming</h4>
+              <div id="barchartProgramming"></div>
+              <h4>Framework</h4>
+              <div id="barchartFramework"></div>
+              <h4>Library</h4>
+              <div id="barchartLibrary"></div> 
+              <h4>Application</h4>
+              <div id="barchartApplication"></div>
+           </div>
           </div>
         </div>
-            <!-- Project One -->
         <div class="col-lg-9">
-          <div class="row">
-            <div class="col-md-7">
-              <a href="#">
-                <img class="img-responsive" src="http://placehold.it/700x300" alt="">
-              </a>
+          <div id="projects">
+            <h3 class="text-center">PROJECTS</h3>
+            <!-- Project One -->
+            <div class="row">
+              <div class="col-md-7">
+                <a href="#">
+                  <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                </a>
+              </div>
+              <div class="col-md-5">
+                <h3 class="text-success"><i class="fa fa-wrench" aria-hidden="true"></i><i class="fa fa-home" aria-hidden="true"></i>&nbsp;&nbsp;Build Me</h3>
+                <h4>
+                  <a href="https://cunytechprep.nyc">
+                   <i>CUNY Tech Prep</i>
+                  </a>
+                  ,&nbsp;
+                  <a href="http://www.techtalentpipeline.nyc">
+                   <i><b>New York Tech Talent Pipeline<b></i>
+                  </a>
+                </h4>
+                <h4><i class="fa fa-star text-warning" aria-hidden="true"></i>&nbsp;A Service web application which connects contractors and Homeowners.</h4>
+                <ul>
+                  <li></li>
+                  <li></li>
+                </ul>
+                <div class="btn-group">
+                  <a class="btn" href="https://github.com/susanjiang03/BuildMe">
+                    <i class="fa fa-github" aria-hidden="true" style="font-size:2vw"></i>
+                  </a>
+                  <a class="btn" href="">
+                    <i class="fa fa-youtube text-danger" aria-hidden="true" style="font-size:2vw"></i>
+                  </a>
+                  <a class="btn" href="">
+                    Live site (Coming soon ...)
+                  </a>
+                </div>
+              </div>
             </div>
-            <div class="col-md-5">
-              <h3>Project One</h3>
-              <h4>Subheading</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
-              <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
-            </div>
-          </div>
-            <!-- /.row -->
-
+              <!-- /.row -->
             <hr>
-
-            <!-- Project Two -->
+              <!-- Project Two -->
             <div class="row">
                 <div class="col-md-7">
                     <a href="#">
@@ -149,66 +177,90 @@
                     </a>
                 </div>
                 <div class="col-md-5">
-                    <h3>Project Two</h3>
-                    <h4>Subheading</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, odit velit cumque vero doloremque repellendus distinctio maiores rem expedita a nam vitae modi quidem similique ducimus! Velit, esse totam tempore.</p>
-                    <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+                  <h3>Visual Code</h3>
+                  <h4><i class="fa fa-star text-warning" aria-hidden="true"></i>&nbsp;A personal web project which visualizes the algorithm of programming questions</h4>
+                  <p></p>
+                  <div class="btn-group">
+                  </div>
                 </div>
             </div>
-            <!-- /.row -->
-
+              <!-- /.row -->
             <hr>
-
-            <!-- Project Three -->
+              <!-- Project Two -->
             <div class="row">
                 <div class="col-md-7">
                     <a href="#">
-                        <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                        <img class="img-responsive" src="./images/web-tf.jpg" alt="">
                     </a>
                 </div>
                 <div class="col-md-5">
-                    <h3>Project Three</h3>
-                    <h4>Subheading</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, temporibus, dolores, at, praesentium ut unde repudiandae voluptatum sit ab debitis suscipit fugiat natus velit excepturi amet commodi deleniti alias possimus!</p>
-                    <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+                  <h3><img src="./images/logo-mta.jpg" alt="" style="width:45px">True or False</h3>
+                  <h4><i class="fa fa-star text-warning" aria-hidden="true"></i>&nbsp;</h4>
+                  <p></p>
+                  <div class="btn-group">
+                    <a class="btn" href="">
+                      <i class="fa fa-youtube text-danger" aria-hidden="true" style="font-size:2vw"></i>
+                    </a>
+                  </div>
                 </div>
             </div>
-            <!-- /.row -->
+              <!-- /.row -->
+              <hr>
+              <!-- Project Three -->
+              <div class="row">
+                  <div class="col-md-7">
+                      <a href="#">
+                          <img class="img-responsive" src="./images/web-mc.jpg" alt="">
+                      </a>
+                  </div>
+                  <div class="col-md-5">
+                      <h3><img src="./images/logo-mta.jpg" alt="" style="width:45px">Multiple Choice Test</h3>
+                      <h4><i class="fa fa-star text-warning" aria-hidden="true"></i>&nbsp;</h4>
+                      <p></p>
+                      <div class="btn-group">
+                        <a class="btn" href="">
+                          <i class="fa fa-youtube text-danger" aria-hidden="true" style="font-size:2vw"></i>
+                        </a>
+                      </div>
+                  </div>
+              </div>
+              <!-- /.row -->
+              <hr>
+              <!-- Project Four -->
+              <div class="row">
 
-            <hr>
+                  <div class="col-md-7">
+                      <a href="">
+                          <img class="img-responsive" src="./images/web-dreamgo.jpg" alt="" style="">
+                      </a>
+                  </div>
+                  <div class="col-md-5">
+                      <h3><a href="http://dreamgo.com"><img src="./images/logo-dreamgo.jpg" style="width:45px">Dream Go Inc.</a></h3>
+                      <h4><i class="fa fa-star text-warning" aria-hidden="true"></i>
+                       Building a DBMS for enterprise internal use and U.S. schools searching engine on company website for external users</h4>
+                      <p></p>
+                      <a class="btn btn-primary" href="http://dreamgo.epizy.com/development/colleges.php">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+                  </div>
+              </div>
+              <!-- /.row -->
 
-            <!-- Project Four -->
-            <div class="row">
+              <hr>
 
-                <div class="col-md-7">
-                    <a href="#">
-                        <img class="img-responsive" src="http://placehold.it/700x300" alt="">
-                    </a>
-                </div>
-                <div class="col-md-5">
-                    <h3>Project Four</h3>
-                    <h4>Subheading</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, quidem, consectetur, officia rem officiis illum aliquam perspiciatis aspernatur quod modi hic nemo qui soluta aut eius fugit quam in suscipit?</p>
-                    <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
-                </div>
-            </div>
-            <!-- /.row -->
-
-            <hr>
-
-            <!-- Project Five -->
-            <div class="row">
-                <div class="col-md-7">
-                    <a href="#">
-                        <img class="img-responsive" src="http://placehold.it/700x300" alt="">
-                    </a>
-                </div>
-                <div class="col-md-5">
-                    <h3>Project Five</h3>
-                    <h4>Subheading</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, quo, minima, inventore voluptatum saepe quos nostrum provident ex quisquam hic odio repellendus atque porro distinctio quae id laboriosam facilis dolorum.</p>
-                    <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
-                </div>
+              <!-- Project Five -->
+              <div class="row">
+                  <div class="col-md-7">
+                      <a href="#">
+                          <img class="img-responsive" src="./images/web-terrestrial.jpg" alt="">
+                      </a>
+                  </div>
+                  <div class="col-md-5">
+                      <h3>Terrestrial Hydrology Viz</h3>
+                      <h4><i>Data Visualization Coursework</i></h4>                                                   
+                      <h4>Subheading</h4>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, quo, minima, inventore voluptatum saepe quos nostrum provident ex quisquam hic odio repellendus atque porro distinctio quae id laboriosam facilis dolorum.</p>
+                      <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+                  </div>
+              </div>
             </div>
             <!-- /.row -->
 
@@ -222,7 +274,7 @@
 
             <!-- Footer -->
             <footer>
-                <div class="row">
+                <div class="container">
                     <div class="col-lg-12">
                         <p>Copyright © Susan Jiang 2017</p>
                     </div>
