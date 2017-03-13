@@ -23,6 +23,42 @@
     <!-- <![endif] -->
   </head>
   <style>
+  #heading {
+/*    width: 100px;
+    height: 100px;*/
+    color: red;
+    font-weight:bold;
+    position: relative;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 10s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    0%    {color:red; left:0px; top:0px;}
+    10%   {color:orange; left:250px; top:0px;}
+    25%   {color:yellow; left:500px; top:0px;}
+    50%   {color:green; left:750px; top:0px;}
+    75%   {color:blue; left:500px; top:0px;}
+    90%   {color:indigo; left:250px; top:20px;}
+    100%  {color:violet; left:0px; top:20px;}
+}
+
+/* Standard syntax */
+@keyframes example {
+    0%    {color:red; left:0px; top:0px;}
+    10%   {color:orange; left:250px; top:0px;}
+    25%   {color:yellow; left:500px; top:0px;}
+    50%   {color:green; left:750px; top:0px;}
+    75%   {color:blue; left:500px; top:0px;}
+    90%   {color:indigo; left:250px; top:20px;}
+    100%  {color:violet; left:0px; top:20px;}
+}
 
 </style>
 
@@ -60,8 +96,8 @@
 
       <!-- Page Heading -->
       <div class="row">
-          <div class="col-lg-12">
-              <h1 class="page-header text-center">
+          <div id="heading" class="col-lg-12">
+              <h1 class="page-header">
                 <i>Hello, World !</i><br>
                   <!-- <small>Susan</small> -->
                   <span>
@@ -171,11 +207,11 @@
             <div class="row">
                 <div class="col-md-7">
                     <a href="#">
-                        <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                        <img class="img-responsive" src="./images/web-visualcode.jpg" alt="">
                     </a>
                 </div>
                 <div class="col-md-5">
-                  <h3>Visual Code</h3>
+                  <h3><img src="./images/logo-visualcode.jpg" alt="" style="width:45px">&nbsp;Visual Code</h3>
                   <h4><i class="fa fa-star text-warning" aria-hidden="true"></i>&nbsp;A personal web project which visualizes the algorithm of programming questions</h4>
                   <p></p>
                   <div class="btn-group">
@@ -196,7 +232,7 @@
                     </a>
                 </div>
                 <div class="col-md-5">
-                  <h3><img src="./images/logo-mta.jpg" alt="" style="width:45px">True or False</h3>
+                  <h3><img src="./images/logo-mta.jpg" alt="" style="width:45px">&nbsp;True or False</h3>
                   <h4><i class="fa fa-star text-warning" aria-hidden="true"></i>&nbsp;A web game application which tests MTA employee knowledge of operations and show top scores</h4>
                   <p></p>
                   <div class="btn-group">
@@ -216,7 +252,7 @@
                       </a>
                   </div>
                   <div class="col-md-5">
-                      <h3><img src="./images/logo-mta.jpg" alt="" style="width:45px">Multiple Choice Test</h3>
+                      <h3><img src="./images/logo-mta.jpg" alt="" style="width:45px">&nbsp;Multiple Choice Test</h3>
                       <h4><i class="fa fa-star text-warning" aria-hidden="true"></i>&nbsp;A web testing application which tests MTA employee knowledge of operations, tracks and analyzes actions of choices</h4>
                       <p></p>
                       <div class="btn-group">
@@ -237,7 +273,7 @@
                       </a>
                   </div>
                   <div class="col-md-5">
-                      <h3><a href="http://dreamgo.com"><img src="./images/logo-dreamgo.jpg" style="width:45px">Dream Go Inc.</a></h3>
+                      <h3><a href="http://dreamgo.com"><img src="./images/logo-dreamgo.jpg" style="width:45px">&nbsp;Dream Go Inc.</a></h3>
                       <h4><i class="fa fa-star text-warning" aria-hidden="true"></i>
                        Building a DBMS for enterprise internal use and U.S. schools searching engine on company website for external users</h4>
                       <p></p>
@@ -261,7 +297,7 @@
                       </a>
                   </div>
                   <div class="col-md-5">
-                      <h3>Terrestrial Hydrology Viz</h3>
+                      <h3><img src="./images/logo-ccny.jpg" alt="" style="width:45px">&nbsp;Terrestrial Hydrology Viz</h3>
                       <h4><i>Data Visualization Coursework</i></h4>                                                   
                       <!-- <h4>Subheading</h4> -->
                       <ul>
@@ -286,7 +322,7 @@
                       </a>
                   </div>
                   <div class="col-md-5">
-                      <h3>Pipeline Monitor</h3>
+                      <h3><img src="./images/logo-ccny.jpg" alt="" style="width:45px">&nbsp;Pipeline Monitor</h3>
                       <h4><i>Website Application Design Coursework</i></h4>                                                   
                       <!-- <h4>Subheading</h4> -->
                       <ul>
@@ -310,7 +346,7 @@
                       </a>
                   </div>
                   <div class="col-md-5">
-                      <h3>E-book Sharing System</h3>
+                      <h3><img src="./images/logo-ccny.jpg" alt="" style="width:45px">&nbsp;E-book Sharing System</h3>
                       <h4><i>Software Engineering Coursework  </i></h4>                                                   
                       <!-- <h4>Subheading</h4> -->
                       <ul>
