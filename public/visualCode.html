@@ -1,165 +1,299 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>Questions</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-      <script src="../static/javascripts/jquery-1.12.4.min.js"></script>
-      <script src="../static/javascripts/bootstrap.min.js"></script>
-     <link rel="stylesheet" href="../static/stylesheets/bootstrap.min.css">
-     <script src="../custom/js/jq_questions.js"></script>
-  <style>
-  body {
-      position: relative;
-  }
 
-  #question1 {padding-top:50px;height:100vh;color: #fff; background-color: #1E88E5;}
-  #question2 {padding-top:50px;height:100vh;color: #fff; background-color: #673ab7;}
-  
-  </style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Visual Code Pipeline</title>
+    <script src="../static/javascripts/jquery-1.12.4.min.js"></script>
+    <script src="../static/javascripts/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../static/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="./static/stylesheets/3-col-portfolio.css" rel="stylesheet">
+    <!-- Bootstrap Core CSS -->
+    <link href="static/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/3-col-portfolio.css" rel="stylesheet">
+
+    <script src="../custom/js/jq_questions.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+    /* entire container, keeps perspective */
+.flip-container {
+    perspective: 1000px;
+}
+    /* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+    width: 100%;
+    height: 400px;
+    padding:2%;
+    border-radius: 10px;
+    overflow-y: overflow;
+}
+
+/* flip speed goes here */
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+}
+
+/* front pane, placed above back */
+.front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+    transform: rotateY(180deg);
+    overflow-y: auto
+}
+
+.modal-dialog{
+    width:80vw;
+}
+
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+
+        });
+    </script>
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Progamming</a>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">
+                    <!-- <img src="./images/logo-visualcode.jpg" alt="" style="width:45px"> -->
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<!--                 <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul> -->
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Header -->
+        <div class="row">
+            <div class="col-lg-12">
+              <h1>
+                <img src="./images/logo-visualcode.jpg" alt="" style="width:60px">&nbsp;Visual Code
+                <small>Demo algorithm for programming questions in visual pipeline</small>
+              </h1>
+            </div>
+        </div>
+        <hr>
+        <!-- /.row -->
+
+        <!-- Projects Row -->
+        <div class="row">
+
+            <div class="col-md-6 portfolio-item">
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front" style="background-color: #1E88E5;">
+                            <h3 style="color:white">
+                            Given a non-negative integer num, repeatedly add all its digits until the result has only one digit. 
+                            For example: Given num = 38, the process is like: 3 + 8 = 11, 1 + 1 = 2. Since 2 has only one digit, return it.
+                            </h3>
+                        </div>
+                        <div class="back">
+                            <img src="../images/question1.png">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="text-center">
+                    <button class="btn btn-default btn-lg" data-toggle="modal" data-target="#ques_1">Demo
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-md-6 portfolio-item">
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front" style="background-color: #673ab7;">
+                            <h3 style="color:white">
+                               Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
+                            </h3>
+                        </div>
+                        <div class="back">
+                            <img src="../images/question2.png">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="text-center">
+                    <button class="btn btn-default btn-lg" data-toggle="modal" data-target="#ques_2">Demo</button>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Projects Row -->
+        <div class="row">
+        <!-- Button trigger modal -->
+          
+        </div>
+        <!-- /.row -->
+        <hr>
+
+        <!-- Pagination -->
+<!--         <div class="row text-center">
+            <div class="col-lg-12">
+                <ul class="pagination">
+                    <li>
+                        <a href="#">&laquo;</a>
+                    </li>
+                    <li class="active">
+                        <a href="#">1</a>
+                    </li>
+                    <li>
+                        <a href="#">2</a>
+                    </li>
+                    <li>
+                        <a href="#">3</a>
+                    </li>
+                    <li>
+                        <a href="#">4</a>
+                    </li>
+                    <li>
+                        <a href="#">5</a>
+                    </li>
+                    <li>
+                        <a href="#">&raquo;</a>
+                    </li>
+                </ul>
+            </div>
+        </div> -->
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Susan Jiang 2017</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
     </div>
-    <div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav">
-          <li><a href="#question1">Question 1</a></li>
-          <li><a href="#question2">Questionc 2</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</nav>
+    <!-- /.container -->
 
-<div id="question1" class="container-fluid">
-      <div class="col-lg-12 h3"> Question 1:<br>
-           Given a non-negative integer num, repeatedly add all its digits until the result has only one digit.
-          <br>
-          For example:
-          Given num = 38, the process is like: 3 + 8 = 11, 1 + 1 = 2. Since 2 has only one digit, return it.
-      </div>
-      <div class="col-lg-5" style="height:80%;background-color: black;">
-          <h2 class="text-center">My Code (javascript)</h2>
-           <pre style="height:85%;overflow: auto;background-color: black;color:white">
-            <img src="../images/question1.png">
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
 
-/*num is a non-negative integer,
-add the digits until get a single digit 
-return rs*/
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
 
-function SumTillSingleDigit(num){
-   
-  //while not getting a single digit, keep adding all digits of the num;
-   while(num > 10){
-       num = AddAllDigits(num);
-   }
-   return num;
-};
+    </body>
 
-/*helper function num is a non-negative integer, 
-add all digits of num, from last digit to first
-return sum*/
-function AddAllDigits(num){
-
-    var sum = 0;
-    //while not getting first digit
-    while(num > 0){
-        //get last digit add to sum
-        var lastDigit = num % 10;
-        sum += lastDigit;
-        //get the rest num except last digit
-        num = Math.floor(num/10);
-   }
-   return sum;
-};
-
-console.log(SumTillSingleDigit(num));
-          </pre>
-       </div>
-       <div class="col-lg-7" style="height:80%;background-color: white;color:black">
-             <h2 class="text-center">Demo</h2>
-              <div class="row">
-                  <label class="col-lg-1 label-lg">Input</label>
-                  <span class="col-lg-4">
-                     <input id="inputQuestion1" type="text" class="form-control col-lg-3" placeholder="Non-negative integer num" aria-describedby="basic-addon1" value="38">
-                  </span>
-                  <button id="btnRunQuestion1" class="btn btn-primary col-lg-2"> Run </button>
-                  <label class="col-lg-1 label-lg">Result</label>
-                  <span id="txtResultQuestion1" class="bg-success col-lg-4 btn">&nbsp;</span>
-              </div>
+    <!-- Modal -->
+    <!-- question 1 -->
+    <div class="modal fade" id="ques_1" tabindex="-1" role="dialog" aria-labelledby="ques_1">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header" style="background-color: #1E88E5;color:white">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h5 class="modal-title" id="myModalLabel">
+                Given a non-negative integer num, repeatedly add all its digits until the result has only one digit. 
+                For example: Given num = 38, the process is like: 3 + 8 = 11, 1 + 1 = 2. Since 2 has only one digit, return it.
+            </h5>
+          </div>
+          <div class="modal-body">
               <ul id="processQuestion1" class="row list-group" style="height:80%;overflow: auto;margin-top:1%">
+                   <h1 class="text-center">Steps ...</h1>
+              </ul>
+          </div>
+          <div class="modal-footer">
+            <div class="row">
+                <label class="col-lg-1 label-lg">Input</label>
+                <span class="col-lg-4">
+                     <input id="inputQuestion1" type="text" class="form-control col-lg-3" placeholder="Non-negative integer num" aria-describedby="basic-addon1" value="38">
+                </span>
+                <button id="btnRunQuestion1" class="btn btn-primary col-lg-2"> Run </button>
+                <label class="col-lg-1 label-lg">Result</label>
+                <span id="txtResultQuestion1" class="bg-success col-lg-4 btn">&nbsp;</span>
+            </div>
+            <hr>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- question 2 -->
+    <div class="modal fade" id="ques_2" tabindex="-1" role="dialog" aria-labelledby="ques_2">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header" style="background-color: #673ab7;color:white">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h5 class="modal-title" id="myModalLabel">
+                Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
+            </h5>
+          </div>
+          <div class="modal-body">
+              <ul id="processQuestion2" class="row list-group" style="height:70%;overflow: auto;margin-top:1%">
                        <h1 class="text-center">Steps ...</h1>
               </ul>
-      </div>
-  </div>
-
-<div id="question2" class="container-fluid">
-    <div class="col-lg-12 h3">
-           Question 2:<br>
-           Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
-           <br>
-          For example,
-          "A man, a plan, a canal: Panama" is a palindrome.
-          "race a car" is not a palindrome.
-    </div>
-           <div class="col-lg-5" style="height:80%;background-color: black;">
-          <h2 class="text-center">My Code (javascript)</h2>
-           <pre style="height:85%;overflow: auto;background-color: black;color:white">
-            <img src="../images/question2.png">
-function IsPalindrome(str){
-    
-   var left = 0;
-   var right = str.length - 1;
-   while(left < right){
-
-      //if both str[left] and str[right] are alphanumeric
-      if(IsAlphanumeric(str[left]) && IsAlphanumeric(str[right])){
-            //compare, if their lowercase are equal ,
-            //move to next position, else return false
-            if(str[left].toLowerCase() == str[right].toLowerCase()){
-              left ++;
-              right --;
-            }
-            else
-              return false;
-      }
-      //not both are alphanumeric, move to next position, 
-      else{
-
-        if(!IsAlphanumeric(str[left])){
-          left ++;
-        }
-
-        if(!IsAlphanumeric(str[right])){
-          right --;
-        }
-
-    }
-   }
-   //if left >= right
-   return true;
-
-};
-
-//check if character c is alphanumeric
-function IsAlphanumeric(c){
-
-    if(c.match(/[a-zA-Z]/) || c.match(/[0-9]/))
-       return true;
-    else 
-       return false;
-};
-          </pre>
-       </div>
-       <div class="col-lg-7" style="height:80%;background-color: white;color:black">
-             <h2 class="text-center">Demo</h2>
+          </div>
+          <div class="modal-footer">
               <div class="row">
                   <label class="col-lg-1 label-lg">Input</label>
                   <span class="col-lg-11">
@@ -168,17 +302,14 @@ function IsAlphanumeric(c){
               </div>
               <div class="row" style="margin-top:1%">
                   <label class="col-lg-1 label-lg">Result</label>
-                  <span id="txtResultQuestion2" class="bg-success col-lg-6 btn">&nbsp;</span>
-                  <button id="btnRunQuestion2" class="btn btn-primary col-lg-5">Run</button>
+                  <span id="txtResultQuestion2" class="bg-success col-lg-7 btn">&nbsp;</span>
+                  <button id="btnRunQuestion2" class="btn btn-primary col-lg-3">Run</button>
               </div>
-              <ul id="processQuestion2" class="row list-group" style="height:70%;overflow: auto;margin-top:1%">
-                       <h1 class="text-center">Steps ...</h1>
-              </ul>
+              <hr>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
       </div>
-  </div>
+    </div>
 
-</div>
-
-</body>
 </html>
-
