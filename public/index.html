@@ -10,6 +10,7 @@
     <script src="../static/javascripts/jquery-1.12.4.min.js"></script>
     <script src="../static/javascripts/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../static/stylesheets/bootstrap.min.css">
+
     <script type="text/javascript" src="../static/javascripts/loader.js"></script>
     <script type="text/javascript" src="../custom/js/js_drawCharts.js"></script>
     <link rel="stylesheet" href="../custom/style/css_index.css">
@@ -71,6 +72,56 @@
   margin-top:5%;
   height:40px;
 }
+
+
+/* Dropdown Button */
+.dropbtn {
+    /*background-color: #4CAF50;*/
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    /*background-color: #3e8e41;*/
+    background-color: red;
+    color:white;
+}
 </style>
 
   <body>
@@ -91,10 +142,17 @@
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
             <li class="active"><a class="navbar-brand" href="#summary">SUMMARY</a></li>
-            <li><a href="#experience">EXPERIENCE</a></li>
-            <li><a href="#projects">PROJECTS</a></li>
+            <li class="dropdown">
+              <a class="btn dropbtn" href="#projects">PROJECTS &nbsp;<span class="caret"></span></a>
+              <div class="dropdown-content">
+                <a href="#buildme">Build Me</a>
+                <a href="#visualcode">Visual Code</a>
+                <a href="#testMC">Multiple Choice Test</a>
+                <a href="#testTF">True or False</a>
+              </div>
+            </li>
+            <li><a href="#timeline">TIMELINE</a></li>
             <li><a href="#section3">AFFILIATIONS</a></li>
-            <li><a href="#section4">EDUCTION</a></li>
             <li><a href="#section5">INTEREST</a></li>
             <li><a href="#section6">RESUME</a></li>
           </ul>
@@ -109,9 +167,9 @@
       <div class="row">
           <div id="heading" class="col-lg-12">
               <h1 class="page-header text-center">
-                <i>Hello, World !</i><br>
+                <i style="font-size:2.5vw">Hello, World !</i><br>
                   <!-- <small>Susan</small> -->
-                  <span>
+                  <span style="font-size:3vw">
                   你<small>/nǐ/</small>好<small>/hǎo/</small>，
                   世<small>/shì/</small>界<small>/jiè/</small> ！
                   </span>
@@ -124,15 +182,15 @@
         <div id="aboutme" class="col-lg-3" style="padding:0">
           <div class="panel col-lg-12" style="padding:0;"">
             <div class="row btn-group">
-              <a href="https://www.cuny.edu" class="btn btn-default">
+              <a href="https://www.cuny.edu" class="btn btn-default" target="_blank">
                 <img src="../images/cuny.jpg" style="width:90px;height:45px">
               </a>
                
-              <a href="https://cunytechprep.nyc" class="btn btn-default">
+              <a href="https://cunytechprep.nyc" class="btn btn-default" target="_blank">
                 <img src="../images/ctp.jpg" style="width:90px;height:45px">
               </a>
 
-              <a href="http://www.techtalentpipeline.nyc/" class="btn btn-default">
+              <a href="http://www.techtalentpipeline.nyc/" class="btn btn-default" target="_blank">
                 <img src="../images/nycttp.jpg" style="width:90px;height:45px">
               </a>
             </div>
@@ -144,16 +202,16 @@
               <h4><a><i class="fa fa-envelope"></i>&nbsp;susanjiang03@gmail.com</a></h4>
               <h4><i class="fa fa-phone"></i>&nbsp;+1 (646) 247-0567</h4>
               <div class="row btn-group">
-                <a class="btn" href="https://github.com/susanjiang03" style="font-size:2.5vw">
+                <a class="btn" href="https://github.com/susanjiang03" target="_blank" style="font-size:2.5vw">
                   <i class="fa fa-github" aria-hidden="true"></i>
                 </a>
-                <a class="btn" href="https://www.linkedin.com/in/susanjiang03/" style="font-size:2.5vw">
+                <a class="btn" href="https://www.linkedin.com/in/susanjiang03/" target="_blank" style="font-size:2.5vw">
                   <i class="fa fa-linkedin-square" aria-hidden="true"></i>
                 </a>
-                <a class="btn" href="https://twitter.com/susanjiang03" style="font-size:2.5vw">
+                <a class="btn" href="https://twitter.com/susanjiang03" target="_blank" style="font-size:2.5vw">
                   <i class="fa fa-twitter" aria-hidden="true"></i>
                 </a>
-                 <a class="btn" href="https://www.facebook.com/susanjiang03" style="font-size:2.5vw">
+                 <a class="btn" href="https://www.facebook.com/susanjiang03" target="_blank" style="font-size:2.5vw">
                   <i class="fa fa-facebook" aria-hidden="true"></i>
                 </a>
               </div>
@@ -196,9 +254,21 @@
           <hr>
           <div id="projects">
             <h2 class="text-center">PROJECTS</h2>
+            <hr>
+            <hr>
             <!-- Project One -->
             <div class="row">
               <div class="col-md-7">
+                <div class="programming">
+                  <img src="./images/fw-nodejs.png">
+                  <img src="./images/pl-js.png">
+                  <img src="./images/pl-sql.png">
+                  <img src="./images/db-postgreSQL.png">
+                  <img src="./images/pl-sequelize.png">
+                  <img src="./images/lb-jquery.gif">
+                  <img src="./images/tp-jade.jpg">
+                  <img src="./images/fw-boostrap.png">
+                </div>
                 <br>
                 <div id="carouselBuildme" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
@@ -258,17 +328,6 @@
                       <span class="sr-only">Next</span>
                     </a>
                 </div>
-
-                <div class="programming">
-                  <img src="./images/fw-nodejs.png">
-                  <img src="./images/pl-js.png">
-                  <img src="./images/pl-sql.png">
-                  <img src="./images/db-postgreSQL.png">
-                  <img src="./images/pl-sequelize.png">
-                  <img src="./images/lb-jquery.gif">
-                  <img src="./images/tp-jade.jpg">
-                  <img src="./images/fw-boostrap.png">
-                </div>
               </div>
               <div class="col-md-5">
                 <h3 class="text-success"><i class="fa fa-wrench" aria-hidden="true"></i><i class="fa fa-home" aria-hidden="true"></i>&nbsp;&nbsp;Build Me</h3>
@@ -287,24 +346,22 @@
                   <li>Implement features of homeowners posting and offering jobs, and contractors searching, bidding and accepting jobs and updating job process.</li>
                 </ul>
                 <div class="btn-group">
-                  <a class="btn" href="https://github.com/susanjiang03/BuildMe">
+                  <a class="btn" href="https://github.com/susanjiang03/BuildMe" target="_blank">
                     <i class="fa fa-github" aria-hidden="true" style="font-size:2vw"></i>
                   </a>
                  <!--  <a class="btn" href="">
                     <i class="fa fa-youtube text-danger" aria-hidden="true" style="font-size:2vw"></i>
                   </a> -->
-                   <a class="btn btn-primary disabled" href="">View <i class="fa fa-external-link" aria-hidden="true"></i></a>(Deploy Soon ...)
+                   <a class="btn btn-primary disabled" href="" target="_blank">View <i class="fa fa-external-link" aria-hidden="true"></i></a>(Deploy Soon ...)
                 </div>
               </div>
             </div>
               <!-- /.row -->
             <hr>
+            <hr>
               <!-- Project Two -->
             <div class="row">
                 <div class="col-md-7">
-                    <a href="#">
-                        <img class="img-responsive" src="./images/web-visualcode.jpg" alt="">
-                    </a>
                     <div class="programming">
                       <img src="./images/pl-php.png">
                       <img src="./images/pl-js.png">
@@ -312,6 +369,10 @@
                       <img src="./images/pl-css-html.png">
                       <img src="./images/fw-boostrap.png">
                     </div>
+                    <br>
+                    <a href="#">
+                        <img class="img-responsive" src="./images/web-visualcode.jpg" alt="">
+                    </a>
                 </div>
                 <div class="col-md-5">
                   <h3><img src="./images/logo-visualcode.jpg" alt="" style="width:45px">&nbsp;Visual Code</h3>
@@ -321,22 +382,15 @@
                     <!-- <a class="btn" href="https://github.com/susanjiang03/">
                       <i class="fa fa-github" aria-hidden="true" style="font-size:2vw"></i>
                     </a> -->
-                    <a class="btn btn-primary" href="visualCode.html">View <i class="fa fa-external-link" aria-hidden="true"></i></a>
+                    <a class="btn btn-primary" href="visualCode.html" target="_blank">View <i class="fa fa-external-link" aria-hidden="true"></i></a>
                   </div>
                 </div>
             </div>
               <!-- /.row -->
             <hr>
-              <!-- Project Two -->
-            <div class="row">
-                <div class="col-md-7">
-                    <a href="https://www.youtube.com/watch?v=DRcTI5-Kknw&feature=youtu.be">
-                      <img class="img-responsive" src="./images/web-tf.jpg" alt="">
-                    </a>
-                    <br>
-                    <div style="position:relative;height:0;padding-bottom:56.25%">
-                      <iframe src="https://www.youtube.com/embed/DRcTI5-Kknw?ecver=2&autoplay=1&loop=1" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe>
-                    </div>
+              <!-- Project Three -->
+              <div class="row">
+                  <div class="col-md-7">
                     <div class="programming">
                       <img src="./images/pl-php.png">
                       <img src="./images/db-mysql.png">
@@ -346,10 +400,125 @@
                       <img src="./images/pl-css-html.png">
                       <img src="./images/fw-boostrap.png">
                     </div>
+                    <br>
+                    <div id="carouselMC" class="carousel slide" data-ride="carousel">
+                      <!-- Indicators -->
+                      <ol class="carousel-indicators">
+                        <li data-target="#carouselMC" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselMC" data-slide-to="1"></li>
+                        <li data-target="#carouselMC" data-slide-to="2"></li>
+                        <li data-target="#carouselMC" data-slide-to="3"></li>
+                        <li data-target="#carouselMC" data-slide-to="4"></li>
+                        <li data-target="#ccarouselMC" data-slide-to="5"></li>
+                        <li data-target="#carouselMC" data-slide-to="6"></li>
+                        <li data-target="#carouselMC" data-slide-to="7"></li>
+                        <li data-target="#carouselMC" data-slide-to="8"></li>
+                        <li data-target="#carouselMC" data-slide-to="9"></li>
+                      </ol>
+                      <!-- Wrapper for slides -->
+                      <div class="carousel-inner" role="listbox">
+
+                        <div class="item active">
+                          <img src="./images/web-mc.jpg">
+                        </div>
+
+                        <div class="item">
+                          <img src="./images/mc-1.PNG">
+                        </div>
+
+                        <div class="item">
+                          <img src="./images/mc-2.PNG">
+                        </div>
+
+                        <div class="item">
+                          <img src="./images/mc-3.PNG">
+                        </div>
+
+                        <div class="item">
+                          <img src="./images/mc-4.PNG">
+                        </div>
+
+                        <div class="item">
+                          <img src="./images/mc-5.PNG">
+                        </div>
+
+                        <div class="item">
+                          <img src="./images/mc-6.PNG">
+                        </div>
+
+                        <div class="item">
+                          <img src="./images/mc-7.PNG">
+                        </div>
+                        <div class="item">
+                          <img src="./images/mc-8.PNG">
+                        </div>
+
+                        <div class="item">
+                          <img src="./images/test.PNG">
+                        </div>
+                      </div>
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#carouselMC" role="button" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carouselMC" role="button" data-slide="next">
+                      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <br>
+                <div style="position:relative;height:0;padding-bottom:56.25%">
+                  <iframe src="https://www.youtube.com/embed/c6nC1VMYSH4?ecver=2&autoplay=1&loop=1" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe>
+                </div>
+
+              </div>
+              <div class="col-md-5">
+                  <h3><img src="./images/logo-mta.jpg" alt="" style="width:45px">&nbsp;Multiple Choice Test</h3>
+
+                  <h4><i>NYCT Operations Training Train Simulator Lab</i></h4>                                                   
+                  <h4><i class="fa fa-star text-warning" aria-hidden="true"></i>&nbsp;A web testing application which tests MTA train operators knowledge of operations
+                  <ul>
+                    <li>Tracks and analyzes actions of choices during the test</li>
+                    <li>Generate timeline graph and data report for managers</li>
+                  </ul>
+               <!--    <div class="btn-group">
+                    <a class="btn" href="">
+                      <i class="fa fa-youtube text-danger" aria-hidden="true" style="font-size:2vw"></i>
+                    </a>
+                  </div> -->
+              </div>
+            </div>
+            <!-- /.row -->
+            <hr>
+            <hr>
+
+                            <!-- Project Two -->
+            <div class="row">
+                <div class="col-md-7">
+                  <div class="programming">
+                    <img src="./images/pl-php.png">
+                    <img src="./images/db-mysql.png">
+                    <img src="./images/pl-sql.png">
+                    <img src="./images/pl-js.png">
+                    <img src="./images/lb-jquery.gif">
+                    <img src="./images/pl-css-html.png">
+                    <img src="./images/fw-boostrap.png">
+                  </div>
+                  <br>
+                  <a href="https://www.youtube.com/watch?v=DRcTI5-Kknw&feature=youtu.be" target="_blank">
+                    <img class="img-responsive" src="./images/web-tf.jpg" alt="">
+                  </a>
+                  <br>
+                  <div style="position:relative;height:0;padding-bottom:56.25%">
+                    <iframe src="https://www.youtube.com/embed/DRcTI5-Kknw?ecver=2&autoplay=1&loop=1" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe>
+                  </div>
+                  <br>
+   
                 </div>
                 <div class="col-md-5">
                   <h3><img src="./images/logo-mta.jpg" alt="" style="width:45px">&nbsp;True or False</h3>
-                  <h4><i>NYCT Operations Training Simulator Lab</i></h4>                                                   
+                  <h4><i>NYCT Operations Training Train Simulator Lab</i></h4>                                                   
                   <h4><i class="fa fa-star text-warning" aria-hidden="true"></i>&nbsp;A web game application which tests MTA train operators knowledge of operations</h4>
                   <ul>
                     <li>Visualize top scores ,score histograms and distribution 
@@ -361,236 +530,143 @@
                     </a>
                   </div> -->
                 </div>
+                <div class="col-md-12 text-center">
+                    <h2>State Diagram of True or False Test</h2>
+                    <img class="img-responsive" src="./images/testTFDiagram.png" alt="State Diagram of True or False">
+                </div>
             </div>
               <!-- /.row -->
               <hr>
-              <!-- Project Three -->
-              <div class="row">
-                  <div class="col-md-7">
-                    <div id="carouselMC" class="carousel slide" data-ride="carousel">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                      <li data-target="#carouselMC" data-slide-to="0" class="active"></li>
-                      <li data-target="#carouselMC" data-slide-to="1"></li>
-                      <li data-target="#carouselMC" data-slide-to="2"></li>
-                      <li data-target="#carouselMC" data-slide-to="3"></li>
-                      <li data-target="#carouselMC" data-slide-to="4"></li>
-                      <li data-target="#ccarouselMC" data-slide-to="5"></li>
-                      <li data-target="#carouselMC" data-slide-to="6"></li>
-                      <li data-target="#carouselMC" data-slide-to="7"></li>
-                      <li data-target="#carouselMC" data-slide-to="8"></li>
-                      <li data-target="#carouselMC" data-slide-to="9"></li>
-
-                    </ol>
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner" role="listbox">
-
-                      <div class="item active">
-                        <img src="./images/web-mc.jpg">
-                      </div>
-
-                      <div class="item">
-                        <img src="./images/mc-1.PNG">
-                      </div>
-
-                      <div class="item">
-                        <img src="./images/mc-2.PNG">
-                      </div>
-
-                      <div class="item">
-                        <img src="./images/mc-3.PNG">
-                      </div>
-
-                      <div class="item">
-                        <img src="./images/mc-4.PNG">
-                      </div>
-
-                      <div class="item">
-                        <img src="./images/mc-5.PNG">
-                      </div>
-
-                      <div class="item">
-                        <img src="./images/mc-6.PNG">
-                      </div>
-
-                      <div class="item">
-                        <img src="./images/mc-7.PNG">
-                      </div>
-                      <div class="item">
-                        <img src="./images/mc-8.PNG">
-                      </div>
-
-                      <div class="item">
-                        <img src="./images/test.PNG">
-                      </div>
-                    </div>
-                    <!-- Left and right controls -->
-                    <a class="left carousel-control" href="#carouselMC" role="button" data-slide="prev">
-                      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                      <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="right carousel-control" href="#carouselMC" role="button" data-slide="next">
-                      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                      <span class="sr-only">Next</span>
-                    </a>
-                </div>
-                    <br>
-                    <div style="position:relative;height:0;padding-bottom:56.25%">
-                      <iframe src="https://www.youtube.com/embed/c6nC1VMYSH4?ecver=2&autoplay=1&loop=1" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe>
-                    </div>
-                    <div class="programming">
-                      <img src="./images/pl-php.png">
-                      <img src="./images/db-mysql.png">
-                      <img src="./images/pl-sql.png">
-                      <img src="./images/pl-js.png">
-                      <img src="./images/lb-jquery.gif">
-                      <img src="./images/pl-css-html.png">
-                      <img src="./images/fw-boostrap.png">
-                    </div>
-                  </div>
-                  <div class="col-md-5">
-                      <h3><img src="./images/logo-mta.jpg" alt="" style="width:45px">&nbsp;Multiple Choice Test</h3>
-
-                      <h4><i>NYCT Operations Training Simulator Lab</i></h4>                                                   
-                      <h4><i class="fa fa-star text-warning" aria-hidden="true"></i>&nbsp;A web testing application which tests MTA train operators knowledge of operations
-                      <ul>
-                        <li>Tracks and analyzes actions of choices during the test</li>
-                        <li>Generate timeline graph and data report for managers</li>
-                      </ul>
-                   <!--    <div class="btn-group">
-                        <a class="btn" href="">
-                          <i class="fa fa-youtube text-danger" aria-hidden="true" style="font-size:2vw"></i>
-                        </a>
-                      </div> -->
-                  </div>
-              </div>
-              <!-- /.row -->
               <hr>
               <!-- Project Four -->
               <div class="row">
-
-                  <div class="col-md-7">
-                    <a href="">
-                        <img class="img-responsive" src="./images/web-dreamgo.jpg" alt="" style="">
+                <div class="col-md-7">
+                  <div class="programming">
+                    <img src="./images/pl-php.png">
+                    <img src="./images/db-mysql.png">
+                    <img src="./images/pl-sql.png">
+                    <img src="./images/pl-js.png">
+                    <img src="./images/lb-jquery.gif">
+                    <img src="./images/pl-css-html.png">
+                    <img src="./images/fw-boostrap.png">
+                  </div>
+                  <br>
+                  <a href="">
+                    <img class="img-responsive" src="./images/web-dreamgo.jpg" alt="" style="">
+                  </a>
+                </div>
+                <div class="col-md-5">
+                  <h3><a href="http://dreamgo.com" target="_blank"><img src="./images/logo-dreamgo.jpg" style="width:45px">&nbsp;Dream Go Inc.</a></h3>
+                  <h4><i class="fa fa-star text-warning" aria-hidden="true"></i>
+                   Building a DBMS for enterprise internal use and U.S. schools searching engine on company website for external users</h4>
+                  <p></p>
+                  <div class="btn-group">
+                    <a class="btn" href="https://github.com/susanjiang03/dreamgo">
+                      <i class="fa fa-github" aria-hidden="true" style="font-size:2vw"></i>
                     </a>
-                    <div class="programming">
-                      <img src="./images/pl-php.png">
-                      <img src="./images/db-mysql.png">
-                      <img src="./images/pl-sql.png">
-                      <img src="./images/pl-js.png">
-                      <img src="./images/lb-jquery.gif">
-                      <img src="./images/pl-css-html.png">
-                      <img src="./images/fw-boostrap.png">
-                    </div>
+                    <a class="btn btn-primary" href="http://dreamgo.epizy.com/development/colleges.php">View <i class="fa fa-external-link" aria-hidden="true"></i></a>
                   </div>
-                  <div class="col-md-5">
-                      <h3><a href="http://dreamgo.com"><img src="./images/logo-dreamgo.jpg" style="width:45px">&nbsp;Dream Go Inc.</a></h3>
-                      <h4><i class="fa fa-star text-warning" aria-hidden="true"></i>
-                       Building a DBMS for enterprise internal use and U.S. schools searching engine on company website for external users</h4>
-                      <p></p>
-                      <div class="btn-group">
-                        <a class="btn" href="https://github.com/susanjiang03/dreamgo">
-                          <i class="fa fa-github" aria-hidden="true" style="font-size:2vw"></i>
-                        </a>
-                        <a class="btn btn-primary" href="http://dreamgo.epizy.com/development/colleges.php">View <i class="fa fa-external-link" aria-hidden="true"></i></a>
-                      </div>
-                  </div>
+                </div>
               </div>
               <!-- /.row -->
-
+              <hr>
               <hr>
 
               <!-- Project Five -->
               <div class="row">
-                  <div class="col-md-7">
-                    <a href="#">
-                        <img class="img-responsive" src="./images/web-terrestrial.jpg" alt="">
-                    </a>
-                    <div class="programming">
-                      <img src="./images/lb-d3.png">
-                      <img src="./images/pl-php.png">
-                      <img src="./images/pl-js.png">
-                      <img src="./images/lb-jquery.gif">
-                      <img src="./images/pl-css-html.png">
-                      <img src="./images/fw-boostrap.png">
+                <div class="col-md-7">
+                  <div class="programming">
+                    <img src="./images/lb-d3.png">
+                    <img src="./images/pl-php.png">
+                    <img src="./images/pl-js.png">
+                    <img src="./images/lb-jquery.gif">
+                    <img src="./images/pl-css-html.png">
+                    <img src="./images/fw-boostrap.png">
+                  </div>
+                  <br>
+                  <a href="#">
+                      <img class="img-responsive" src="./images/web-terrestrial.jpg" alt="">
+                  </a>
+                </div>
+                <div class="col-md-5">
+                    <h3><img src="./images/logo-ccny.jpg" alt="" style="width:45px">&nbsp;Terrestrial Hydrology Viz</h3>
+                    <h4><i>Data Visualization Coursework</i></h4>                                                   
+                    <!-- <h4>Subheading</h4> -->
+                    <ul>
+                      <li>Applied scikit-learn Machine Learning tool in Python to find the data pattern of climate change indicators</li>
+                      <li>Produced interactive visualization web application of the clusters map with JavaScript D3 library </li>
+                    </ul>
+                    <div class="btn-group">
+                      <a class="btn" href="https://github.com/susanjiang03/Terrestrial_Hydrology_Visualization">
+                        <i class="fa fa-github" aria-hidden="true" style="font-size:2vw"></i>
+                      </a>
+                      <a class="btn btn-primary" href="https://terrestrial-hydrology-viz.herokuapp.com">View <i class="fa fa-external-link" aria-hidden="true"></i></a>(compatible in Safari)
                     </div>
-                  </div>
-                  <div class="col-md-5">
-                      <h3><img src="./images/logo-ccny.jpg" alt="" style="width:45px">&nbsp;Terrestrial Hydrology Viz</h3>
-                      <h4><i>Data Visualization Coursework</i></h4>                                                   
-                      <!-- <h4>Subheading</h4> -->
-                      <ul>
-                        <li>Applied scikit-learn Machine Learning tool in Python to find the data pattern of climate change indicators</li>
-                        <li>Produced interactive visualization web application of the clusters map with JavaScript D3 library </li>
-                      </ul>
-                      <div class="btn-group">
-                        <a class="btn" href="https://github.com/susanjiang03/Terrestrial_Hydrology_Visualization">
-                          <i class="fa fa-github" aria-hidden="true" style="font-size:2vw"></i>
-                        </a>
-                        <a class="btn btn-primary" href="https://terrestrial-hydrology-viz.herokuapp.com">View <i class="fa fa-external-link" aria-hidden="true"></i></a>(compatible in Safari)
-                      </div>
-                  </div>
+                </div>
               </div>
+              <hr>
               <hr>
 
                 <!-- Project Six -->
               <div class="row">
-                  <div class="col-md-7">
-                    <a href="">
-                        <img class="img-responsive" src="./images/web-pipeline.jpg" alt="">
+                <div class="col-md-7">
+                 <div class="programming">
+                    <img src="./images/fw-django.png">
+                    <img src="./images/pl-python.png">
+                    <img src="./images/pl-sequelize.png">
+                    <img src="./images/pl-js.png">
+                    <img src="./images/pl-css-html.png">
+                    <img src="./images/fw-boostrap.png">
+                  </div>
+                  <br>
+                  <a href="">
+                      <img class="img-responsive" src="./images/web-pipeline.jpg" alt="">
+                  </a>
+                </div>
+                <div class="col-md-5">
+                  <h3><img src="./images/logo-ccny.jpg" alt="" style="width:45px">&nbsp;Pipeline Monitor</h3>
+                  <h4><i>Website Application Design Coursework</i></h4>                                                   
+                  <!-- <h4>Subheading</h4> -->
+                  <ul>
+                    <li>Collaborated in a 4-member team to create a news aggregator to scrap main content from RSS feeds</li>
+                    <li>Implemented a pipeline monitor to monitor the process of generating data and a dashboard to visualize the result</li>
+                  </ul>
+                  <div class="btn-group">
+                    <a class="btn" href="https://github.com/susanjiang03/pipeline_monitor"><i class="fa fa-github" aria-hidden="true" style="font-size:2vw"></i>
                     </a>
-                     <div class="programming">
-                      <img src="./images/fw-django.png">
-                      <img src="./images/pl-python.png">
-                      <img src="./images/pl-sequelize.png">
-                      <img src="./images/pl-js.png">
-                      <img src="./images/pl-css-html.png">
-                      <img src="./images/fw-boostrap.png">
-                    </div>
+                    <a class="btn btn-primary disabled" href="">View <i class="fa fa-external-link" aria-hidden="true"></i></a>(Deploy Soon ...)
                   </div>
-                  <div class="col-md-5">
-                      <h3><img src="./images/logo-ccny.jpg" alt="" style="width:45px">&nbsp;Pipeline Monitor</h3>
-                      <h4><i>Website Application Design Coursework</i></h4>                                                   
-                      <!-- <h4>Subheading</h4> -->
-                      <ul>
-                        <li>Collaborated in a 4-member team to create a news aggregator to scrap main content from RSS feeds</li>
-                        <li>Implemented a pipeline monitor to monitor the process of generating data and a dashboard to visualize the result</li>
-                      </ul>
-                      <div class="btn-group">
-                        <a class="btn" href="https://github.com/susanjiang03/pipeline_monitor"><i class="fa fa-github" aria-hidden="true" style="font-size:2vw"></i>
-                        </a>
-                        <a class="btn btn-primary disabled" href="">View <i class="fa fa-external-link" aria-hidden="true"></i></a>(Deploy Soon ...)
-                      </div>
-                  </div>
+                </div>
               </div>
               <hr>
 
                 <!-- Project 7 -->
               <div class="row">
-                  <div class="col-md-7">
-                    <a href="" class="btn" style="font-size:3vw;height:300px">
-                      <!-- <img  alt=""> -->
-                      E-Book Sharing System
+                <div class="col-md-7">
+                  <div class="programming">
+                    <img src="./images/pl-java.png">
+                    <img src="./images/pl-sql.png">
+                  </div>
+                  <br>
+                  <a href="" class="btn" style="font-size:3vw;height:300px">
+                    <!-- <img  alt=""> -->
+                    E-Book Sharing System
+                  </a>
+                </div>
+                <div class="col-md-5">
+                  <h3><img src="./images/logo-ccny.jpg" alt="" style="width:45px">&nbsp;E-book Sharing System</h3>
+                  <h4><i>Software Engineering Coursework  </i></h4>                                                   
+                  <!-- <h4>Subheading</h4> -->
+                  <ul>
+                    <li>Led a 3-member team to developed a Java application which allowed registered users to share text files and super users to administrate e-book library and users</li>
+                    <li>Implemented a pipeline monitor to monitor the process of generating data and a dashboard to visualize the result</li>
+                  </ul>
+                  <div class="btn-group">
+                    <a class="btn" href="https://github.com/susanjiang03/EbookSharing"><i class="fa fa-github" aria-hidden="true" style="font-size:2vw"></i>
                     </a>
-                    <div class="programming">
-                      <img src="./images/pl-java.png">
-                      <img src="./images/pl-sql.png">
-                    </div>
+                    <a class="btn btn-primary disabled" href="">View <i class="fa fa-external-link" aria-hidden="true"></i></a>(Deploy Soon ...)
                   </div>
-                  <div class="col-md-5">
-                      <h3><img src="./images/logo-ccny.jpg" alt="" style="width:45px">&nbsp;E-book Sharing System</h3>
-                      <h4><i>Software Engineering Coursework  </i></h4>                                                   
-                      <!-- <h4>Subheading</h4> -->
-                      <ul>
-                        <li>Led a 3-member team to developed a Java application which allowed registered users to share text files and super users to administrate e-book library and users</li>
-                        <li>Implemented a pipeline monitor to monitor the process of generating data and a dashboard to visualize the result</li>
-                      </ul>
-                      <div class="btn-group">
-                        <a class="btn" href="https://github.com/susanjiang03/EbookSharing"><i class="fa fa-github" aria-hidden="true" style="font-size:2vw"></i>
-                        </a>
-                        <a class="btn btn-primary disabled" href="">View <i class="fa fa-external-link" aria-hidden="true"></i></a>(Deploy Soon ...)
-                      </div>
-                  </div>
+                </div>
               </div>
             </div>
             <!-- /.row -->
