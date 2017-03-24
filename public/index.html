@@ -123,13 +123,11 @@
 
 </style>
 
-  <body>
+  <body data-spy="scroll" data-target=".navbar" data-offset="20">
 
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
-           
-
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -144,6 +142,7 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
+            <li><a href="#about">About Me</a></li>
             <li class="active"><a class="navbar-brand" href="#summary">SUMMARY</a></li>
             <li><a href="#skills">SKILLS</a></li>
             <li class="dropdown">
@@ -160,9 +159,10 @@
               </div>
             </li>
             <li><a href="#timeline">TIMELINE</a></li>
-            <li><a href="#section3">AFFILIATIONS</a></li>
-            <li><a href="#section6">RESUME</a></li>
-            <li><a href="#section5">MORE</a></li>
+            <li><a href="#affliations">AFFILIATIONS</a></li>
+            <li><a href="#resume">RESUME</a></li>
+            <li><a href="#coverletter">COVER LETTER</a></li>
+            <li><a href="#more">MORE</a></li>
           </ul>
         </div>
       </div>
@@ -231,7 +231,7 @@
               </div>
               <hr>
              <!-- <div class="barChart"> -->
-              <div  id="skills">
+              <div id="skills">
                 <h2>SKILLS</h2>
                 <h4>Programming</h4>
                 <div id="barchartProgramming"></div>
@@ -252,20 +252,21 @@
         <div class="col-lg-9" style="padding-left:5%">
           <div id="summary">
             <h2 class="text-center">SUMMARY</h2>
+            Seeking Full Time | Aspiring Software Developer | NYC Tech Talent Pipeline | Web Development | Data Visualization | Code for Social Good
             <div class="h4 row text-primary">
               <ul class="list-group">
                 <li class="list-group-item">Actively seeking a full time position in software development where I can contribute my skills and abilities to the growth of organization
                 </li>
-                <li>
-                Passionate about building tech solutions for business to make work more efficient and for people to make life easier
+                <li class="list-group-item">
+                Passionate about building tech solutions for business and people to make life easier
                 </li>
-                <li class="list-group-item">Critical thinking, love to solve problems, with innovative ideas, willing to accept challenge every day.</li>
-                <li class="list-group-item">Solid understanding of data structure, algorithms, OOP, and modern design patterns.</li>
-                <li class="list-group-item">Experienced Technical Developer with a demonstrated history of working in the information technology. 
+                <li class="list-group-item">Critical thinking, love to solve problems, with innovative ideas, willing to accept challenge every day</li>
+                <li class="list-group-item">Solid understanding of data structure, algorithms, OOP, and modern design patterns</li>
+                <li class="list-group-item">Experienced Technical Developer with a demonstrated history of working in the information technology 
                 </li>
-                <li class="list-group-item">Skilled in Python, JavaScript, PHP, SQL, C++, and jQuery etc. 
+                <li class="list-group-item">Skilled in Python, JavaScript, PHP, SQL, C++, and jQuery etc.
                 </li>
-                <li class="list-group-item">Strong engineering professional, graduated from The City College of New York, City University of New York. 
+                <li class="list-group-item">Strong engineering professional, graduated from The City College of New York, CUNY
                 </li>
               </ul>
             </div>
@@ -495,7 +496,8 @@
               <div class="col-md-5">
                   <h3><img src="./images/logo-mta.jpg" alt="" style="width:45px">&nbsp;Multiple Choice Test</h3>
 
-                  <h4><i>NYCT Operations Training Train Simulator Lab</i></h4>                                                   
+                  <h4><i>NYCT Operations Training Train Simulator Lab</i></h4>
+                  <h4>Computer Application Support Aide Internship</h4>                                                   
                   <h4><i class="fa fa-star text-warning" aria-hidden="true"></i>&nbsp;A web testing application which tests MTA train operators knowledge of operations
                   <ul>
                     <li>Tracks and analyzes actions of choices during the test</li>
@@ -537,7 +539,8 @@
                 </div>
                 <div class="col-md-5">
                   <h3><img src="./images/logo-mta.jpg" alt="" style="width:45px">&nbsp;True or False</h3>
-                  <h4><i>NYCT Operations Training Train Simulator Lab</i></h4>                                                   
+                  <h4><i>NYCT Operations Training Train Simulator Lab</i></h4>
+                  <h4>Computer Application Support Aide Internship</h4>                                                
                   <h4><i class="fa fa-star text-warning" aria-hidden="true"></i>&nbsp;A web game application which tests MTA train operators knowledge of operations</h4>
                   <ul>
                     <li>Visualize top scores ,score histograms and distribution 
@@ -576,14 +579,17 @@
                 </div>
                 <div class="col-md-5">
                   <h3><a href="http://dreamgo.com" target="_blank"><img src="./images/logo-dreamgo.jpg" style="width:45px">&nbsp;Dream Go Inc.</a></h3>
-                  <h4><i class="fa fa-star text-warning" aria-hidden="true"></i>
-                   Building a DBMS for enterprise internal use and U.S. schools searching engine on company website for external users</h4>
+                  <h4>Web Application Developer Internship</h4>
+                   <ul>
+                      <li>Building a DBMS for enterprise internal use and implementing new features in WordPress on external website</li>
+                      <li>Designing and developing apps to meet business requirements; web scrapping; data populating; data mining </li>
+                    </ul>
                   <p></p>
                   <div class="btn-group">
                     <a class="btn" href="https://github.com/susanjiang03/dreamgo">
                       <i class="fa fa-github" aria-hidden="true" style="font-size:2vw"></i>
                     </a>
-                    <a class="btn btn-primary" href="http://dreamgo.epizy.com/development/colleges.php">View <i class="fa fa-external-link" aria-hidden="true"></i></a>
+                    <a class="btn btn-primary" href="http://www.marketingunbox.com">View <i class="fa fa-external-link" target="_blank" aria-hidden="true"></i></a>
                   </div>
                 </div>
               </div>
@@ -691,8 +697,25 @@
             <!-- /.row -->
             <hr>
             <div id="timeline">
-              <h1 class="text-center">TIMELINE</h1>
+              <h1 class="text-center"><a href="timeline.html"><u>TIMELINE</u></a></h1>
             </div>
+            <div id="resume">
+              <h1 class="text-center">RESUME</h1>
+              <object data="/data/Resume_Susan_Jiang_03232017.pdf" type="application/pdf" width="100%" height="100%"></object>
+            </div>
+            <div id="coverletter">
+              <h1 class="text-center">COVER LETTER</h1>
+              <object data="/data/Coverletter_Susan_Jiang_03232017.pdf" type="application/pdf" width="100%" height="100%"></object>
+            </div>
+            <div id="coverletter">
+              <h1 class="text-center">MORE</h1>
+              <div>
+              Idols: 
+              Readings: 
+              Hobbies:
+              </div>
+            </div>
+      
         </div>
       </div>   <!-- /.row -->
     </div>
