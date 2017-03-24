@@ -136,4 +136,5 @@ function DrawBarChart(dataArray,containerID){
       chart.draw(view, options);
   }
 };
+
  
