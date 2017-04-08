@@ -32,6 +32,8 @@
 <script>
 $(document).ready(function(){
 
+  $('[data-toggle="tooltip"]').tooltip();
+
 
 });
 </script>
@@ -72,10 +74,11 @@ $(document).ready(function(){
               </div>
             </li>
             <li><a href="#timeline">TIMELINE</a></li>
-            <li><a href="#affliations">AFFILIATIONS</a></li>
-            <li><a href="#resume">RESUME</a></li>
-            <li><a href="#coverletter">COVER LETTER</a></li>
+            <!-- <li><a href="#affliations">AFFILIATIONS</a></li> -->
             <li><a href="#funfacts">FUN FACTS ABOUT ME</a></li>
+            <li><a href="#resume">RESUME</a></li>
+            <!-- <li><a href="#coverletter">COVER LETTER</a></li> -->
+
           </ul>
         </div>
       </div>
@@ -568,10 +571,8 @@ $(document).ready(function(){
                       <a class="btn btn-primary" href="https://terrestrial-hydrology-viz.herokuapp.com">View <i class="fa fa-external-link" aria-hidden="true"></i></a>(compatible in Safari)
                     </div>
                 </div>
-                <h2 class="text-primary">Project Presentation</h2>
-                <object data="/data/presentation_terrestrial-hydrology-viz.pdf" type="application/pdf" width="100%" height="80%"></object>
-                <h2 class="text-primary">Project Report</h2>
-                <object data="/data/report_terrestrial-hydrology-viz.pdf" type="application/pdf" width="100%" height="120%"></object>
+                <h2 class="text-primary">Project Presentation & Report </h2>
+                <object data="/data/Report-terrestrial-hydrology-viz.pdf" type="application/pdf" width="100%" height="80%"></object>
             </div>
             <hr class="style10" >
 
@@ -642,11 +643,8 @@ $(document).ready(function(){
                   <a class="btn btn-primary disabled" href="">View <i class="fa fa-external-link" aria-hidden="true"></i></a>(Deploy Soon ...)
                 </div>
               </div>
-              <h2 class="col-lg-12 text-primary">Project Presentation 1</h2>
-              <object data="/data/Report-PipelineMonitor-12-03-2015.pdf" type="application/pdf" width="100%" height="80%">
-              </object>
-              <h2 class="text-primary">Project Presentation 2</h2>
-              <object data="/data/Report-PipelineMonitor-12-10-2015.pdf" type="application/pdf" width="100%" height="80%">
+              <h2 class="col-lg-12 text-primary">Project Presentation </h2>
+              <object data="/data/Report-PipelineMonitor.pdf" type="application/pdf" width="100%" height="80%">
               </object>
             </div>
             <hr class="style10" >
@@ -680,131 +678,154 @@ $(document).ready(function(){
               </div>
             </div>
           </div>
+        </div>
             <!-- /.row -->
+          <hr>
+        <div id="timeline">
+          <h1 class="text-center">
+            <a href="">
+              <u>TIMELINE</u>
+              <i class="fa fa-bar-chart" aria-hidden="true"></i>
+              <i class="fa fa-external-link" aria-hidden="true"></i>
+            </a>
+          </h1>
+        </div>
+            
+    <div id="funfacts" class="container">
+        <h1 class="text-center">FUN FACTS ABOUT ME</h1>
+        <div class="text-left">
+            <div style="margin:1%">
+              <h3 class="col-lg-2 col-md-12 col-sm-12">Favorite Quote: </h3>
+              <div class="col-lg-10 col-md-12 col-sm-12">
+                  <blockquote>Imagine there are two worlds, one world with you, one world without you, maximize the differences between the two worlds, maximize your influence, this is the meaning of your life.</blockquote>
+                  <cite>
+                    by a philosophy professor from Columbia University, 
+                    in <a href="https://en.wikipedia.org/wiki/Kai-Fu_Lee" target="_blank">Kai-Fu Lee</a>'s official autobiography, 
+                    <i><a href="http://english.sina.com/business/p/2011/1031/409969.html" target="_blank">Making a World of Difference</a></i> 
+                  </cite>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="col-lg-2 col-md-12 col-sm-12">Idols :</h3> 
+              <div class="col-lg-10 col-md-12 col-sm-12">
+                  <a href="https://en.wikipedia.org/wiki/Nelson_Mandela" class="btn btn-primary" target="_blank" style="margin:1%">
+                    <img src="../images/mandela-enemies-quote.png" style="height:30vh" >
+                  </a>
+                  <a href="https://en.wikipedia.org/wiki/Mahatma_Gandhi" class="btn btn-primary" target="_blank" style="margin:1%">
+                    <img src="../images/idol-gandhi.jpg" style="height:30vh">
+                  </a>
+                  <a href="https://en.wikipedia.org/wiki/Steve_Jobs" class="btn btn-primary" target="_blank" style="margin:1%">
+                    <img src="../images/idol-steve-jobs.jpg" style="height:30vh">
+                  </a>
+                  <a href="https://en.wikipedia.org/wiki/Jack_Ma" class="btn btn-primary" target="_blank" style="margin:1%">
+                    <img src="../images/quotes-Jack-Ma.jpg" style="height:30vh">
+                  </a>
+              </div>
+            </div>
+
+            <div>
+                <h3 class="col-lg-2 col-md-12 col-sm-12">Readings: </h3>
+                <div class="col-lg-10 col-md-12 col-sm-12">
+                  <a href="https://en.wikipedia.org/wiki/The_World_Is_Flat" class="btn btn-success" target="_blank" style="margin:1%">
+                      <img src="../images/reading-world-flat.jpeg" style="height:22vh">
+                  </a>
+                  <a href="http://www.biography.com/people/steve-jobs-9354805" class="btn btn-success" target="_blank" style="margin:1%">
+                      <img src="../images/reading-steve-jobs.jpg" style="height:22vh">
+                  </a>
+                  <a href="http://english.sina.com/business/p/2011/1031/409969.html" class="btn btn-success" target="_blank" style="margin:1%" title="Making A World of Difference" data-toggle="tooltip" data-placement="bottom">
+                      <img src="../images/reading-kaifu.jpg" style="height:22vh">
+                  </a>
+                  <a href="https://www.amazon.com/Best-You-That-Can-Chinese/dp/7010051240" class="btn btn-success" target="_blank" style="margin:1%"
+                  title="Be The Best You That You Can Be" data-toggle="tooltip" data-placement="bottom">
+                      <img src="../images/reading-kaifu-2.jpg" style="height:22vh" alt="Be The Best You That You Can Be">
+                     
+                  </a>
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="col-lg-4">
+                  <h3>Favorite Movie:</h3>
+                  <div> 
+                      <img src="../images/movie-shawshank-redemption.jpg" style="height:25vh">
+                  </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <h3>Favorite Sport : </h3>
+                    <div>
+                      <img src="../images/basketball.ico" style="height:12vh">
+                      <img src="../images/nba-logo.ico" style="height:12vh">
+                    </div>
+                </div>
+                    
+                <div class="col-lg-4">
+                    <h3>Hobbies: </h3>
+                    <div>
+                      <img src="../images/painting.JPG" style="height:15vh">
+                      <img src="../images/math.jpg" style="height:15vh">
+                    </div>
+                </div>
+            </div>
+
             <hr>
-            <div id="timeline">
-              <h1 class="text-center">
-                <a href="">
-                  <u>TIMELINE</u>
-                  <i class="fa fa-bar-chart" aria-hidden="true"></i>
-                  <i class="fa fa-external-link" aria-hidden="true"></i>
-                </a>
-              </h1>
+            <h1 class="text-warning">My Dreams </h1>
+            <div>
+              <div class="col-lg-12" style="margin:1%">
+                <img class="col-lg-4" src="../images/dream-scientist.jpg" style="height:20vh">
+                <h3 class="col-lg-8"> 
+                    When I was 10, 
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;I wanted to be a scientist to discover new technlogies to beat cancers.
+                </h3>
+              </div>
+              <div class="col-lg-12" style="margin:1%">
+                  <img class="col-lg-4" src="../images/dream-doctor.jpeg" style="height:20vh">
+                  <h3 class="col-lg-8"> 
+                   When I was 18, 
+                   <br>&nbsp;&nbsp;&nbsp;&nbsp;I wanted to be a doctor to save patients' lives. 
+                  </h3>
+              </div>
+
+              <div class="col-lg-12" style="margin:1%">
+                  <img class="col-lg-4" src="../images/dream-entrepreneur.jpg" style="height:25vh">
+                  <h3 class="col-lg-8"> 
+                    When I was 19,
+                   <br>&nbsp;&nbsp;&nbsp;&nbsp;I wanted to be an entrepreneur to help people with money.
+                  </h3>
+              </div>
+
+
+              <div class="col-lg-12" style="margin:1%">
+                  <img class="col-lg-4" src="../images/dream-developer.jpg" style="height:25vh">
+                  <h3 class="col-lg-8"> 
+                    When I was 21, in college,
+                   <br>&nbsp;&nbsp;&nbsp;&nbsp;I found myself enjoy programming and are excited to implement innovative features. I decided to devote myself into tech career to develop great apps that can benefit millions of people. I have a dream to use softwares to engineer a better society.
+                  </h3>
+              </div>
+              <div class="col-lg-12" style="margin:1%">
+                 <img class="col-lg-4" src="../images/dreambig.jpg" style="height:30vh">
+                  <h3 class="text-primary">
+                  &nbsp;&nbsp;&nbsp;&nbsp; My ultimate dream has never been changed. I wish I had an influence in making the world a better place to live. I want to help people who are in proverty, in hunger, and in uneducated. 
+                  <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;I have never doubted that I can use my codes to accomplish my dreams one day. I want to use technology apps to help children to find pleasure in science study and grow up to become great people for the world.
+                  </h3>
+              </div>
             </div>
-            <div id="resume">
-              <h1 class="text-center">RESUME</h1>
-              <object data="/data/Resume_Susan_Jiang.pdf" type="application/pdf" width="100%" height="150%"></object>
-            </div>
-            <div id="coverletter">
-              <h1 class="text-center">COVER LETTER</h1>
-             <!--  <object data="/data/Coverletter_Susan_Jiang_03242017.pdf" type="application/pdf" width="100%" height="100%"></object> -->
-            </div>   
-            <div id="funfacts">
-                <h2 class="text-center">FUN FACTS ABOUT ME</h2>
-                  <div class="text-left">
-                  <h3>Favorite Quote: </h3>
-                    <blockquote>Imagine there are two worlds, one world with you, one world without you, maximize the differences between the two worlds, maximize your influence, this is the meaning of your life.</blockquote>
-                    <cite>
-                      by a philosophy professor from Columbia University, 
-                      in <a href="https://en.wikipedia.org/wiki/Kai-Fu_Lee" target="_blank">Kai-Fu Lee</a>'s official autobiography, 
-                      <i><a href="http://english.sina.com/business/p/2011/1031/409969.html" target="_blank">Making a World of Difference</a></i> 
-                    </cite>
-                  <!-- <br> -->
-                  <h3>Favorite Movies:</h3>
-                  <div>
-                    <img src="../images/movie-shawshank-redemption.jpg" style="height:25vh">
-                  </div>
-                  <h3>Idols :</h3> 
-                  <div>
-                    <a href="https://en.wikipedia.org/wiki/Nelson_Mandela" class="btn btn-primary" target="_blank" style="margin:1%">
-                      <img src="../images/mandela-enemies-quote.png" style="height:30vh" >
-                    </a>
-                    <a href="https://en.wikipedia.org/wiki/Mahatma_Gandhi" class="btn btn-primary" target="_blank" style="margin:1%">
-                      <img src="../images/idol-gandhi.jpg" style="height:30vh">
-                    </a>
-                    <a href="https://en.wikipedia.org/wiki/Steve_Jobs" class="btn btn-primary" target="_blank" style="margin:1%">
-                      <img src="../images/idol-steve-jobs.jpg" style="height:30vh">
-                    </a>
-                    <a href="https://en.wikipedia.org/wiki/Jack_Ma" class="btn btn-primary" target="_blank" style="margin:1%">
-                      <img src="../images/quotes-Jack-Ma.jpg" style="height:30vh">
-                    </a>
-                  </div>
-                  <div>
-                    <h3>Readings: </h3>
-                    <a href="https://en.wikipedia.org/wiki/The_World_Is_Flat" class="btn btn-success" target="_blank" style="margin:1%">
-                        <img src="../images/reading-world-flat.jpeg" style="height:22vh">
-                    </a>
-                    <a href="http://www.biography.com/people/steve-jobs-9354805" class="btn btn-success" target="_blank" style="margin:1%">
-                        <img src="../images/reading-steve-jobs.jpg" style="height:22vh">
-                    </a>
-                    <a href="http://english.sina.com/business/p/2011/1031/409969.html" class="btn btn-success" target="_blank" style="margin:1%">
-                        <img src="../images/reading-kaifu.jpg" style="height:20vh">
-                        <br>
-                        Making A World of Difference
-                    </a>
-                    <a href="https://www.amazon.com/Best-You-That-Can-Chinese/dp/7010051240" class="btn btn-success" target="_blank" style="margin:1%">
-                        <img src="../images/reading-kaifu-2.jpg" style="height:20vh" alt="Be The Best You That You Can Be">
-                       <br> Be The Best You  That You Can Be
-                    </a>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-6">
-                    <h3>Favorite Sport</h3>
-                       <div>
-                        <img src="../images/basketball.ico" style="height:10vh">
-                        <img src="../images/nba-logo.ico" style="height:10vh">
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <h3>Hobbies: </h3>
-                      <div>
-                        <img src="../images/painting.JPG" style="height:10vh">
-                      </div>
-                    </div>
-                  </div>
-                  <hr>
-                  <h3>My Dreams: </h3>
-                  <div>
-                    <h4>&nbsp;&nbsp; When I was 10, I wanted to be a scientist to discover new technlogy to beat cancers.
-                    <br>
-                    &nbsp;&nbsp; When I was 18, I wanted to be a doctor to save more people's lives. 
-                    <br>
-                     &nbsp;&nbsp; When I was 19, I wanted to be an entrepreneur to help people with money.
-                    <br>
-                    &nbsp;&nbsp; When I was 21, I decided to be a software engineer to develop great apps that can benefit millions of people.
-                    <br>
-                    <span class="text-primary">
-                    &nbsp;&nbsp; However, my ultimate dream has never been changed. I wish I had an influence in making the world a better place to live. I want to help people who are in proverty, in hunger, and in uneducated. 
-                    &nbsp;&nbsp;<br>In college, I discovered myself enjoy implementing innovative features for users. I am excited to use softwares to engineer a better society.
-                    <h3> Right now, I strongly believe I can use my code to accomplish my dreams one day. I have a great interest in EdTech. I want to help children to find pleasure in science study and grow up to become any people they want to be.
-                    </h3>
-                    </span>
-                    </h4>
-                  </div>
+        </div>
+    </div>
 
-<!--                   When I was 10, I wanted to be
-A Lawyer- 1 year of law school changed my mind about that quickly.
-Books I would suggest to a friend
-The Unbearable Lightness of Being - Milan Kundera
-Favorite Pastime
-Watching the Kings hoist the Stanley Cup....oh, wait. That hasn't happened yet. I guess I can keep dreaming of that day.....
-Favorite Sports Team (don't hold it against me!!)
-LA Kings & the UCLA Bruins :-)
-Favorite Movies
-Goodfellas
-Favorite Band or Songs
-Beach House, Radiohead, Bon Iver, Band of Horses, Dylan, J5, Monsters of Folk, Black Keys, Grizzly Bear, Sam Cooke, the Stones, Beatles and much more!
-What I like to do when NOT recruiting
-Surf, travel, Volleyball, Hockey, Hiking, eating, biking and hang with good people....Bask in the glory of 2 Stanley Cup wins by the LA Kings! 
-Favorite Task
-Can't be a favorite anything if we call it a task ;-)
-Coolest job on the planet
-Mine, of course!
-Idea to make the world a better place
- -->
+        <div id="resume">
+            <h1 class="text-center">RESUME</h1>
+            <object data="/data/Resume_Susan_Jiang.pdf" type="application/pdf" width="100%" height="150%"></object>
+        </div>
+        <div id="coverletter">
+            <!-- <h1 class="text-center">COVER LETTER</h1> -->
+           <!--  <object data="/data/Coverletter_Susan_Jiang_03242017.pdf" type="application/pdf" width="100%" height="100%"></object> -->
+        </div>   
 
 
-                  </div>
+
             </div>   
         </div>
       </div>   <!-- /.row -->
