@@ -1,0 +1,403 @@
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Tic Tac Toe</title>
+    <script src="../static/javascripts/jquery-1.12.4.min.js"></script>
+    <script src="../static/javascripts/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../static/stylesheets/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <style>
+  	.container button{
+  		font-size:3vw;
+  		font-weight:bold
+  	}
+
+  	#interface .grid{
+  		width:33%;
+  		display: inline;
+  	}
+  </style>
+  <body>
+  	<div class="container well text-center" style="height:100vh">
+  		<div>
+  			<button id="btnPlayersTwo" class="btn btn-default btn-lg pull-left"
+  			role="tooltip" title="Player A vs. Player B" data-placement="bottom" style="font-size:2.5vw;">
+  				<i class="fa fa-refresh" aria-hidden="true"></i>&nbsp;&nbsp;
+				<span><i class="fa fa-user" aria-hidden="true"></i>&nbsp;A</span>
+				&nbsp;&nbsp;vs.&nbsp;&nbsp;
+				<span><i class="fa fa-user" aria-hidden="true"></i>&nbsp;B</span>
+  			</button>
+  			<button id="btnReset" class="btn btn-warning btn-lg "
+  			role="tooltip" title="Restart" data-placement="bottom">
+  				<i class="fa fa-refresh" aria-hidden="true"></i>
+  				&nbsp;&nbsp;Tic Tac Toe&nbsp;&nbsp;
+  			</button>
+  			<button id="btnPlayerOne" class="btn btn-default btn-lg pull-right"
+  			role="tooltip" title="You vs. Computer" data-placement="bottom" style="font-size:2.5vw;">
+  				<i class="fa fa-refresh" aria-hidden="true"></i>&nbsp;&nbsp;
+  				<span><i class="fa fa-desktop" aria-hidden="true"></i></span>
+				&nbsp;&nbsp;&nbsp;vs.&nbsp;&nbsp;&nbsp;
+				<span><i class="fa fa-user" aria-hidden="true"></i></span>
+  			</button>
+  		</div>
+  		<hr>
+  		<div id="#interface">
+  			<div id="playerA" class="col-lg-2 col-md-2 col-sm-2">
+  				<button id="btnO" class="btn btn-success" value="O" style="font-size:6vw">&nbsp;O&nbsp;</button>
+  				<br>
+  				<div class="text-left" style="font-size:2vw">
+  					<div>Win &nbsp;&nbsp;:&nbsp;<span name="win"></span></div>
+  					<div>Lose : &nbsp;<span name="lose"></span></div>
+  					<div>Tie &nbsp;&nbsp;&nbsp;: &nbsp;<span name="tie"></span></div>
+  				</div>
+  				<br>
+  				<div name="icon" class="btn" style="font-size:3vw"></div>
+  			</div>
+
+  			<div id="board" class="col-lg-8 col-md-8 col-sm-8" style="padding:0 5% 0 5%">
+  	
+  			</div>
+
+
+  			<div id="playerB" class="col-lg-2 col-md-2 col-sm-2">
+  				<button id="btnX" class="btn btn-danger" value="X" style="font-size:6vw">&nbsp;X&nbsp;</button>
+				<br>
+  				<div class="text-left" style="font-size:2vw">
+  					<div>Win &nbsp;&nbsp;:&nbsp;<span name="win"></span></div>
+  					<div>Lose : &nbsp;<span name="lose"></span></div>
+  					<div>Tie &nbsp;&nbsp;&nbsp;: &nbsp;<span name="tie"></span></div>
+  				</div>
+  				<br>
+  				<div name="icon" class="btn" style="font-size:3vw"></div>
+  			</div>
+
+  		<div>
+
+  	</div>
+  	<script>
+  	$(document).ready(function(){
+
+  		//player vs. computer : not implemented
+  		$("#btnPlayerOne").prop("disabled", true);
+
+  		var start,current,boardValues,total,players;
+  
+		//create board
+  		for(var i=0; i<3;i++){
+
+  		  var row = "";
+	      for(var j=0; j<3; j++){
+	         row +='<button style="border:2px solid;width:33%;display:inline" class="btn grid bg-primary" name="' +  i + ',' + j + '">&nbsp;</button>';
+	      }
+	      $("#board").append('<div class="row">' + row + '</div>');
+
+	   	}
+
+	   	$("#board .grid").height($("#board .grid").width())
+	   	.css({"font-size": $(".grid").width()*0.6});
+
+	   	//reset
+	   	$("#btnReset").click(function(){
+
+  			// $("[id^=btnPlayer]").prop("disabled", false).removeClass("btn-primary");
+  			$("#btnPlayersTwo").prop("disabled", false).removeClass("btn-primary");
+  			$("[id^=player]").find("[name]").html("");
+  			$("[name=icon]").removeClass("btn-info")
+			CleanBoard();
+			$(".grid,#btnO,#btnX").prop("disabled", true);
+	   	});
+
+	   	//reset
+	   	$("#btnReset").trigger("click");
+
+
+	   	$("[id^=btnPlayer]").click(function(){
+
+	   		$(this).addClass("btn-primary");
+	   		$(this).siblings("[id^=btnPlayer]").prop("disabled",true);
+	   		//set player icons
+  			$("#playerA [name=icon]").html($(this).children("span").eq(0).html());
+  			$("#playerB [name=icon]").html($(this).children("span").eq(1).html());
+
+	  
+	   		//reset player stats
+ 			players = { "A" :{}, "B" : {}};
+  			SetPlayer('A',"win",0);
+  			SetPlayer('A',"tie",0);
+  			SetPlayer('A',"lose",0);
+  			SetPlayer('B',"win",0);
+  			SetPlayer('B',"tie",0);
+  			SetPlayer('B',"lose",0);
+
+	   		start = "X";
+	   		Restart();
+	   	});
+
+
+	   	$("body").on("click", ".grid", function(){
+
+	   		var nameSplit = $(this).attr("name").split(",").map(Number);
+	   		var x = nameSplit[0];
+	   		var y = nameSplit[1];
+	   		boardValues[x][y] = current;
+	   		$(this).text(current);
+	   		var newClass = (current == "O") ? "btn-success" : "btn-danger";
+	   		$(this).removeClass("btn-primary").addClass(newClass);
+	   		$(this).prop("disabled", true);
+
+	   		total += 1;
+	   		CheckWin();
+
+	   	});
+
+
+	   	/*check if current player won */
+	   	function CheckWin(){
+
+	   		if(CheckH() || CheckV() || CheckD()){
+
+					SetWin();
+					setTimeout(function(){ 
+	   					Restart();
+	   				},2000);
+	   		}
+	   		//no win
+	   		else{
+	   			//tie
+	   			if(total == 9){
+
+	   				SetTie();
+	   				setTimeout(function(){ 
+	   					Restart();
+	   				},2000);
+	   			}
+	   			else{
+	   				//continue
+		   			ChangeTurn();
+		   			return false;
+		   		}
+	   		}
+	   	};
+
+
+	   	/*check if current player won in horizontal row */
+	   	function CheckH(){
+
+	   		for(var row = 0; row<3; row++){
+
+	   			for(var col = 0; col<3; col++){
+	   				//not equal current "O" or "X", exist this loop
+	   				if(boardValues[row][col] != current){
+	   					break;
+	   				}
+
+	   				//if equal, and this is second , continue
+	   				if(col == 1){
+	   					continue;
+	   				}
+	   				
+	   				//if equal, and this is last, win
+	   				if(col == 2){
+	   					//show win row
+	   					$("#board div.row").eq(row)
+	   					.children(".grid").removeClass("btn-success btn-danger").addClass("btn-warning");
+	   					return true;
+	   				}
+	   			}
+	   		}
+	   		return false;
+	   	};
+
+	   	/*check if current player won in vertical row */
+	   	function CheckV(){
+
+	   		for(var col = 0; col<3; col++){
+
+	   			for(var row = 0; row<3; row++){
+	   				//not equal current "O" or "X", exist this loop
+	   				if(boardValues[row][col] != current){
+	   					break;
+	   				}
+
+	   				//if equal, and this is second , continue
+	   				if(row == 1){
+	   					continue;
+	   				}
+	   				
+	   				//if equal, and this is last, win
+	   				if(row == 2){
+
+	   					//show win col
+	   					$("#board div.row").each(function(){
+
+	   						$(this).children(".grid").eq(col)
+	   						.removeClass("btn-success btn-danger").addClass("btn-warning");
+	   					})
+	   					
+	   					return true;
+	   				}
+	   			}
+	   		}
+	   		return false;
+
+
+	   	};
+
+	   	/*check if current player won in diagonal row */
+	   	function CheckD(){
+
+	   		//top left to right bottom
+	   		for(var i = 0; i<3; i++){
+
+   				if(boardValues[i][i] != current){
+   					break;
+   				}
+
+   				//if equal, and this is second , continue
+   				if(i == 1){
+   					continue;
+   				}
+   				
+   				//if equal, and this is last, win
+   				if(i == 2){
+
+   					//show win diag
+   					var names = ["0,0", "1,1", "2,2"];
+   					for(var n in names){
+   						$("#board .grid[name='"+ names[n] + "']")
+   						.removeClass("btn-success btn-danger").addClass("btn-warning");
+   					}
+   	
+   					return true;
+   				}
+	   		}
+
+	   		//top right to left bottom
+	   		for(var i = 2; i >= 0; i--){
+
+   				if(boardValues[2 - i][i] != current){
+   					break;
+   				}
+   				//if equal, and this is second , continue
+   				if(i == 1){
+   					continue;
+   				}
+   				
+   				//if equal, and this is last, win
+   				if(i == 0){
+   					
+   					//show win diag
+   					var names = ["0,2", "1,1", "2,0"];
+   					for(var n in names){
+   						$("#board .grid[name='"+ names[n] + "']")
+   						.removeClass("btn-success btn-danger").addClass("btn-warning");
+   					}
+   					return true;
+   				}
+	   		}
+
+	   		return false;
+
+	   	};
+
+
+	   	/* change start with "O"/"X" in turn when each game over */
+	   	function ChangeStart(){
+
+	   		current = start;
+	   		start = (start == "O") ? "X" : "O";
+	   		ChangeTurn();
+	   	}
+
+
+	   	/*change turn base on current value:
+	   	current "O" => "X" , current "X" => "O" 
+	   	start first
+	   	*/
+	   	function ChangeTurn(){
+
+	   		var next = (current == "O") ? "X" : "O";
+
+	   		$("#btn" + current).prop("disabled", true).css("color","grey")
+	   			.siblings("[name=icon]").removeClass("btn-info");
+
+	   		$("#btn" + next).prop("disabled", false).css("color","white")
+	   			.siblings("[name=icon]").addClass("btn-info");
+
+	   		current = next;
+	   	};
+
+	   	/*set @player('A' or 'B') 's @attr new @value,
+	   	 and update in front end */
+	   	function SetPlayer(player, attr, value){
+	   		players[player][attr] = value;
+	   		$("#player" + player).find("[name="+ attr +"]").text(value);
+	   		console.log(JSON.stringify(players));
+	   	};
+
+
+	   //win 
+	   	function SetWin(){
+
+	   		alert("[" + current + "]   WIN  !!!");
+
+	   		$(".grid").prop("disabled", true);
+
+            if(current == "O"){
+				SetPlayer("A", "win", players["A"]["win"] + 1);
+				SetPlayer("B", "lose", players["B"]["lose"] + 1);
+			}
+			else{
+				//'X'
+				SetPlayer("B", "win", players["B"]["win"] + 1);
+				SetPlayer("A", "lose", players["A"]["lose"] + 1);
+			}
+	   	}
+
+
+	   	function SetTie(){
+
+			alert("Tie");
+			SetPlayer("A", "tie", (players["A"]["tie"] + 1));
+			SetPlayer("B", "tie", (players["B"]["tie"] + 1));
+
+	   	};
+
+	   	//clean board, continue, reset, change start 
+	   	function CleanBoard(){
+
+	   		$(".grid").html("").prop("disabled", false)
+	   		.removeClass("btn-success btn-danger btn-warning").addClass("btn-primary");
+
+	   		total = 0;
+	   		//reset matrix
+  			boardValues = [
+  							["", "", ""],
+  							["", "", ""],
+  							["", "", ""],
+  						  ];
+
+	   		
+	   	};
+
+	   	//restart
+	   	function Restart(){
+
+	   		CleanBoard();
+	   		ChangeStart();
+	   	}
+
+
+	   	$('[role="tooltip"]').tooltip(); 
+
+  	});
+  	</script>
+  </body>
+<html>
