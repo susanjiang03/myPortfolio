@@ -25,17 +25,17 @@
   	}
   </style>
   <body>
-  	<div class="container well text-center" style="height:100vh">
+  	<div class="container well text-center" style="height:auto">
   		<div>
   			<button id="btnPlayersTwo" class="btn btn-default btn-lg pull-left"
-  			role="tooltip" title="Player A vs. Player B" data-placement="bottom" style="font-size:2.5vw;">
+  			role="tooltip" title="RESET : Player A vs. Player B  ( A start first )" data-placement="bottom" style="font-size:2.5vw;">
   				<i class="fa fa-refresh" aria-hidden="true"></i>&nbsp;&nbsp;
 				<span><i class="fa fa-user" aria-hidden="true"></i>&nbsp;A</span>
 				&nbsp;&nbsp;vs.&nbsp;&nbsp;
 				<span><i class="fa fa-user" aria-hidden="true"></i>&nbsp;B</span>
   			</button>
   			<button id="btnReset" class="btn btn-warning btn-lg "
-  			role="tooltip" title="Restart" data-placement="bottom">
+  			role="tooltip" title="RESET ALL" data-placement="bottom">
   				<i class="fa fa-refresh" aria-hidden="true"></i>
   				&nbsp;&nbsp;Tic Tac Toe&nbsp;&nbsp;
   			</button>
@@ -48,7 +48,7 @@
   			</button>
   		</div>
   		<hr>
-  		<div id="#interface">
+  		<div id="#interface" class="row">
   			<div id="playerA" class="col-lg-2 col-md-2 col-sm-2">
   				<button id="btnO" class="btn btn-success" value="O" style="font-size:6vw">&nbsp;O&nbsp;</button>
   				<br>
@@ -78,7 +78,10 @@
   				<div name="icon" class="btn" style="font-size:3vw"></div>
   			</div>
 
-  		<div>
+  		</div>
+  	<div class="text-left">
+  	Instruction:
+  	</div>
 
   	</div>
   	<script>
@@ -384,7 +387,6 @@
   							["", "", ""],
   						  ];
 
-	   		
 	   	};
 
 	   	//restart
@@ -399,5 +401,6 @@
 
   	});
   	</script>
+
   </body>
 <html>
