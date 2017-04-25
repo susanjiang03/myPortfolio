@@ -27,7 +27,7 @@
   			$("[id^=player]").find("[name]").html("");
   			$("[name=icon]").removeClass("btn-info")
 			CleanBoard();
-			$(".grid,#btnO,#btnX").prop("disabled", true);
+			$(".grid,#btnO,#btnX").prop("disabled", true).css("color", "white");
 	   	});
 
 	   	//reset
